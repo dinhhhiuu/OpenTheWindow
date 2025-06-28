@@ -22,4 +22,15 @@ public class Item {
             case ItemType.Key3: return ItemAssets.Instance.Key3;
         }
     }
+
+    public bool IsStackable() {
+        switch (itemType) {
+        default:
+        case ItemType.Key1:
+        case ItemType.Key2:
+            return true;
+        case ItemType.Key3:
+            return false;  
+        }
+    }
 }

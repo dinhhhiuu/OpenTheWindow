@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     private Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
 
-    public float speed = 1.0f;
+    public float speed = 5.0f;
     private Rigidbody2D rb;
 
     private void Awake() {
@@ -22,12 +22,22 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
-        Vector2 movement = new Vector2(horizontal, vertical);
-
-        rb.AddForce(movement * speed);
+        if (Input.GetKey(KeyCode.A))
+        {
+            rb.AddForce(new Vector2(-speed * Time.deltaTime, 0));
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            rb.AddForce(new Vector2(speed * Time.deltaTime, 0));
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            rb.AddForce(new Vector2(0, speed * Time.deltaTime));
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(new Vector2(0, -speed * Time.deltaTime));
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3664311099057115937}
   - component: {fileID: 3891381135427142274}
   m_Layer: 0
-  m_Name: ItemWorld
+  m_Name: bfItemWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
