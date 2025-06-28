@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class Item : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+[Serializable]
+public class Item {
+    public enum ItemType {
+        Key1,
+        Key2,
+        Key3
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public ItemType itemType;
+    public int amount;
+
+    public Sprite GetSprite() {
+        switch (itemType) {
+            default:
+            case ItemType.Key1: return ItemAssets.Instance.Key1;
+            case ItemType.Key2: return ItemAssets.Instance.Key2;
+            case ItemType.Key3: return ItemAssets.Instance.Key3;
+        }
     }
 }

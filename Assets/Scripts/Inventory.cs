@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class store : MonoBehaviour
+public class Inventory
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public event EventHandler OnItemListChanged;
+
+    private List<Item> itemList;
+
+    public Inventory() {
+        itemList = new List<Item>();
+
+        AddItem(new Item {itemType = Item.ItemType.Key1, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Key2, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Key3, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Key3, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Key3, amount = 1});
+            // AddItem(new Item {itemType = Item.ItemType.Key3, amount = 1});
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void AddItem(Item item) {
+        itemList.Add(item);
+        OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
+
+    public List<Item> getItemList() {
+        return itemList;
+    } 
 }
