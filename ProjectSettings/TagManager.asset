@@ -8,10 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Floor
   - Water
   - UI
-  - 
+  - Frame
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 4264659143
+    locked: 0
+  - name: Carpet
+    uniqueID: 4042192235
+    locked: 0
+  - name: Wall
+    uniqueID: 2434781853
+    locked: 0
+  - name: Frame
+    uniqueID: 14295619
+    locked: 0
+  - name: Item
+    uniqueID: 3674942227
     locked: 0
