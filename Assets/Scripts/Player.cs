@@ -8,6 +8,17 @@ public class player : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     public Vector3 moveInput;
+    
+    // Inventory
+    private Inventory inventory;
+    [SerializeField] private UI_Inventory uiInventory;
+    [SerializeField] private  UI_ItemSlot uiItemSlot;
+
+    private void Awake() {
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
+        uiInventory.SetPlayer(this);
+    }
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -43,5 +54,18 @@ public class player : MonoBehaviour
             animator.SetBool("isBehind", false);
             animator.SetBool("isAhead", false);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider) {
+        ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
+        if (itemWorld != null) {
+            //Touching Item
+            inventory.AddItem(itemWorld.GetItem());
+            itemWorld.DestroySelf();
+        }
+    }
+
+    public Vector3 GetPosition() {
+        return transform.position;
     }
 }
