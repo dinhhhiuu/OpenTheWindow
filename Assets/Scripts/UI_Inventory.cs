@@ -80,7 +80,8 @@ public class UI_Inventory : MonoBehaviour
             if (eventData.button == PointerEventData.InputButton.Left) {
                 // Use Item
                 Debug.Log("Click chuột trái: USE");
-                inventory.UseItem(item);
+                // inventory.UseItem(item);
+                Loader.Load(Loader.Scene.MainHome);
             }
             else if (eventData.button == PointerEventData.InputButton.Right) {
                 // Drop Item

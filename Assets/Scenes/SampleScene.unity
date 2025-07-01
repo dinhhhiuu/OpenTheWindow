@@ -484,7 +484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemType: 0
-    amount: 1
+    amount: 4
 --- !u!4 &941049738
 Transform:
   m_ObjectHideFlags: 0
@@ -935,7 +935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemType: 1
-    amount: 5
+    amount: 1
 --- !u!4 &1644311191
 Transform:
   m_ObjectHideFlags: 0
@@ -1141,7 +1141,7 @@ GameObject:
   - component: {fileID: 2126280462}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1249,7 +1249,6 @@ MonoBehaviour:
   moveSpeed: 5
   moveInput: {x: 0, y: 0, z: 0}
   uiInventory: {fileID: 2031764151}
-  uiItemSlot: {fileID: 0}
 --- !u!61 &2126280463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1338,6 +1337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemWorld
       objectReference: {fileID: 0}
+    - target: {fileID: 7344081689456803010, guid: 76f0c09cc76a5384a883c986137c29f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7774851269274377525, guid: 76f0c09cc76a5384a883c986137c29f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.33
@@ -1381,10 +1384,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2313890716664049005, guid: 76f0c09cc76a5384a883c986137c29f0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76f0c09cc76a5384a883c986137c29f0, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
