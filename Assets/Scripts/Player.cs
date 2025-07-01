@@ -12,10 +12,9 @@ public class player : MonoBehaviour
     // Inventory
     private Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
-    [SerializeField] private  UI_ItemSlot uiItemSlot;
 
     private void Awake() {
-        inventory = new Inventory();
+        inventory = new Inventory(UseItem);
         uiInventory.SetInventory(inventory);
         uiInventory.SetPlayer(this);
     }
@@ -67,5 +66,17 @@ public class player : MonoBehaviour
 
     public Vector3 GetPosition() {
         return transform.position;
+    }
+
+    private void UseItem(Item item) {
+        switch (item.itemType) {
+            default:
+            case Item.ItemType.KeyBlue:
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.KeyBlue, amount = 1 });
+                break; 
+            case Item.ItemType.KeyWhite:
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.KeyWhite, amount = 1 });
+                break;
+        }
     }
 }

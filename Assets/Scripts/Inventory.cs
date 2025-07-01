@@ -6,8 +6,10 @@ using System;
 public class Inventory {
     public event EventHandler OnItemListChanged;
     private List<Item> itemList;
+    private Action<Item> useItemAction;
 
-    public Inventory() {
+    public Inventory(Action<Item> useItemAction) {
+        this.useItemAction = useItemAction;
         itemList = new List<Item>();
         AddItem(new Item {itemType = Item.ItemType.KeyBlue, amount = 1});
         AddItem(new Item {itemType = Item.ItemType.KeyWhite, amount = 1});
@@ -34,6 +36,7 @@ public class Inventory {
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
+    // Remove Item
     public void RemoveItem(Item item) {
         if (item.IsStackable()) {
             Item itemInInventory = null;
@@ -44,15 +47,20 @@ public class Inventory {
                 }
             }
             if (itemInInventory != null && itemInInventory.amount <= 0) {
-                itemList.Remove(item);
+                itemList.Remove(itemInInventory);
             }
         } else {
-            itemList.Add(item);
+            itemList.Remove(item);
         }
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
     public List<Item> GetItemList() {
         return itemList;
+    }
+
+    // Use Item
+    public void UseItem(Item item) {
+        useItemAction(item);
     }
 }

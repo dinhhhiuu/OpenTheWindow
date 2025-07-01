@@ -16,14 +16,17 @@ public class ItemWorld : MonoBehaviour
 
     /////
     public static ItemWorld DropItem(Vector3 dropPosition, Item item) {
-        // Tạo vector ngẫu nhiên theo 2D
-        Vector3 randomDir = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        // Tạo vector ngẫu nhiên trong vòng tròn đơn vị
+        Vector3 randomDir = Random.insideUnitCircle * 5f;
 
         // Tạo item tại vị trí lệch 1 chút so với gốc
-        ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 5f, item);
+        ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir, item);
 
         // Tác động lực cho Rigidbody2D để nảy ra
-        itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 5f, ForceMode2D.Impulse);
+        itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir, ForceMode2D.Impulse);
+
+        // Dừng lại item sau khi tạo
+        itemWorld.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
         return itemWorld;
     }

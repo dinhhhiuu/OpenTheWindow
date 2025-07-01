@@ -78,13 +78,16 @@ public class UI_Inventory : MonoBehaviour
 
         public void OnPointerClick(PointerEventData eventData) {
             if (eventData.button == PointerEventData.InputButton.Left) {
-                Debug.Log("Click chuột trái: DROP");
-                inventory.RemoveItem(item);
-                ItemWorld.DropItem(player.GetPosition(), item);
+                // Use Item
+                Debug.Log("Click chuột trái: USE");
+                inventory.UseItem(item);
             }
             else if (eventData.button == PointerEventData.InputButton.Right) {
-                Debug.Log("Click chuột phải: USE");
-                // item.Use(); // hoặc gọi inventory.UseItem(item) nếu bạn có.
+                // Drop Item
+                Debug.Log("Click chuột phải: DROP");
+                Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
+                inventory.RemoveItem(item);
+                ItemWorld.DropItem(player.GetPosition(), duplicateItem);
             }
         }
     }
