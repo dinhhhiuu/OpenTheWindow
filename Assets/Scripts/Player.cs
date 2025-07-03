@@ -64,7 +64,7 @@ public class player : MonoBehaviour
         if (itemWorld != null) {
             //Touching Item
             inventory.AddItem(itemWorld.GetItem());
-            itemWorld.DestroySelf();
+            itemWorld.Collect();
         }
     }
 

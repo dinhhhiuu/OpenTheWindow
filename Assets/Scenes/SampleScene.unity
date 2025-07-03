@@ -364,6 +364,7 @@ MonoBehaviour:
   item:
     itemType: 0
     amount: 5
+  itemUniqueId: scene1-keyblue-2
 --- !u!4 &389367501
 Transform:
   m_ObjectHideFlags: 0
@@ -556,6 +557,7 @@ MonoBehaviour:
   item:
     itemType: 0
     amount: 5
+  itemUniqueId: scene1-keyblue-1
 --- !u!4 &686448248
 Transform:
   m_ObjectHideFlags: 0
@@ -854,8 +856,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1644311191}
-  - component: {fileID: 1644311190}
   - component: {fileID: 1644311189}
+  - component: {fileID: 1644311190}
   m_Layer: 0
   m_Name: ItemWorldSpawner_KeyWhite
   m_TagString: Untagged
@@ -930,6 +932,7 @@ MonoBehaviour:
   item:
     itemType: 1
     amount: 1
+  itemUniqueId: scene1-keywhite-1
 --- !u!4 &1644311191
 Transform:
   m_ObjectHideFlags: 0
@@ -940,6 +943,50 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.51, y: -4.5, z: -0.057165194}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2001352437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001352439}
+  - component: {fileID: 2001352438}
+  m_Layer: 0
+  m_Name: 'ItemSaveManager '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2001352438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001352437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c55b080d6cd3b947a36169cbf67fc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2001352439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001352437}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.608474, y: 0.07342863, z: -10.045921}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1199,3 +1246,4 @@ SceneRoots:
   - {fileID: 389367501}
   - {fileID: 222390869}
   - {fileID: 1312136428}
+  - {fileID: 2001352439}
