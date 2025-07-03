@@ -10,6 +10,7 @@ public static class Loader {
         MainHome,
         SampleScene,
         Loading,
+        OverviewHouse,
     }
     private static Action onLoaderCallback;
 
