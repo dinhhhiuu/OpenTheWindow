@@ -9,19 +9,23 @@ public class player : MonoBehaviour
     private Animator animator;
     public Vector3 moveInput;
     
-    // Inventory
+    // Inventory lấy từ PlayerManager
     private Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
 
-    private void Awake() {
-        inventory = new Inventory(UseItem);
-        uiInventory.SetInventory(inventory);
-        uiInventory.SetPlayer(this);
-    }
+    // private void Awake() {
+    //     inventory = PlayerManager.Instance.Inventory;
+    //     uiInventory.SetInventory(inventory);
+    //     uiInventory.SetPlayer(this);
+    // }
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        //
+        inventory = PlayerManager.Instance.Inventory;
+        uiInventory.SetInventory(inventory);
+        uiInventory.SetPlayer(this);
     }
 
     private void Update() {

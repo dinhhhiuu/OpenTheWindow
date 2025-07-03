@@ -22,6 +22,10 @@ public class UI_Inventory : MonoBehaviour
     }
 
     public void SetInventory(Inventory inventory) {
+        // Nếu đã đăng ký event trước đó thì bỏ
+        if (this.inventory != null)
+            this.inventory.OnItemListChanged -= Inventory_OnItemListChanged;
+
         this.inventory = inventory;
         inventory.OnItemListChanged += Inventory_OnItemListChanged;
         RefreshInventoryItems();
@@ -32,7 +36,8 @@ public class UI_Inventory : MonoBehaviour
     }
 
     private void RefreshInventoryItems() {
-        foreach (Transform child in itemSlotContainer) {
+        // foreach (Transform child in itemSlotContainer) {
+        foreach (Transform child in itemSlotContainer) { 
             if (child == itemSlotTemplate) continue;
             Destroy(child.gameObject);
         }
@@ -61,6 +66,12 @@ public class UI_Inventory : MonoBehaviour
                 y--;
             }
         }
+    }
+
+    private void OnDestroy() {
+        // Gỡ đăng ký event khi UI bị xóa
+        if (inventory != null)
+            inventory.OnItemListChanged -= Inventory_OnItemListChanged;
     }
 
     // ===================== LỚP LỒNG ======================
