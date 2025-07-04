@@ -11,19 +11,16 @@ public class Inventory {
     public Inventory(Action<Item> useItemAction) {
         this.useItemAction = useItemAction;
         itemList = new List<Item>();
-        AddItem(new Item {itemType = Item.ItemType.KeyBlue, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.KeyWhite, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.KeyBlue, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.KeyBlue, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.KeyBlue, amount = 1});
+        // AddItem(new Item {itemType = Item.ItemType.KeyBlue, amount = 1});
     }
 
+    // Add Item
     public void AddItem(Item item) {
         if (item.IsStackable()) {
             bool itemAlreadyInInventory = false;
-            foreach (Item inventory in itemList) {
-                if (inventory.itemType == item.itemType) {
-                    inventory.amount += item.amount;
+            foreach (Item inventoryItem in itemList) {
+                if (inventoryItem.itemType == item.itemType) {
+                    inventoryItem.amount += item.amount;
                     itemAlreadyInInventory = true;
                 }
             }
@@ -59,7 +56,7 @@ public class Inventory {
         return itemList;
     }
 
-    // Use Item
+    // Dùng item: báo về player để set selectedItem
     public void UseItem(Item item) {
         useItemAction(item);
     }

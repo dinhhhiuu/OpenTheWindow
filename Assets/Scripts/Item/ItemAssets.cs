@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemAssets : MonoBehaviour
-{
+public class ItemAssets : MonoBehaviour {
     public static ItemAssets Instance { get; private set; }
 
     private void Awake() {
-        Instance = this;
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Destroy(gameObject);
+        }
     }
 
     public Transform pfItemWorld;

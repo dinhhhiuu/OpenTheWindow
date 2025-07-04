@@ -5,6 +5,14 @@ using TMPro;
 
 public class ItemWorld : MonoBehaviour {
     private string itemUniqueId;
+    private Item item;
+    private SpriteRenderer spriteRenderer;
+    private TextMeshPro textMeshPro;
+
+    private void Awake() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
+    }
 
     public static ItemWorld SpawnItemWorld(Vector3 position, Item item, string itemUniqueId = "") {
         Transform transform = Instantiate(ItemAssets.Instance.pfItemWorld, position, Quaternion.identity);
@@ -23,15 +31,6 @@ public class ItemWorld : MonoBehaviour {
         // Dừng lại item sau khi tạo
         itemWorld.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         return itemWorld;
-    }
-
-    private Item item;
-    private SpriteRenderer spriteRenderer;
-    private TextMeshPro textMeshPro;
-
-    private void Awake() {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
     }
 
     public void SetItem(Item item, string itemUniqueId = "") {

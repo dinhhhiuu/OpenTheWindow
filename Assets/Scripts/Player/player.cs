@@ -2,27 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
-{
+public class player : MonoBehaviour {
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Animator animator;
     public Vector3 moveInput;
-    
-    // Inventory lấy từ PlayerManager
     private Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
-
-    // private void Awake() {
-    //     inventory = PlayerManager.Instance.Inventory;
-    //     uiInventory.SetInventory(inventory);
-    //     uiInventory.SetPlayer(this);
-    // }
+    private static Item selectedItem;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        //
         inventory = PlayerManager.Instance.Inventory;
         uiInventory.SetInventory(inventory);
         uiInventory.SetPlayer(this);
@@ -68,19 +59,28 @@ public class player : MonoBehaviour
         }
     }
 
+    // Return position
     public Vector3 GetPosition() {
         return transform.position;
     }
 
-    private void UseItem(Item item) {
-        switch (item.itemType) {
-            default:
-            case Item.ItemType.KeyBlue:
-                inventory.RemoveItem(new Item { itemType = Item.ItemType.KeyBlue, amount = 1 });
-                break; 
-            case Item.ItemType.KeyWhite:
-                inventory.RemoveItem(new Item { itemType = Item.ItemType.KeyWhite, amount = 1 });
-                break;
-        }
+    // Use item temporarily
+    public void UseItem(Item item) {
+        selectedItem = item;
+    }
+
+    // Return item temp to check
+    public Item GetSelectedItem() {
+        return selectedItem;
+    }
+
+    // Unselect item
+    public void UnSelectItem() {
+        selectedItem = null;
+    }
+
+    // Return inventory to other script
+    public Inventory GetInventory() {
+        return inventory;
     }
 }

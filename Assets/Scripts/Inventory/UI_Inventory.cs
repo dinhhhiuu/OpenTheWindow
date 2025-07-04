@@ -36,7 +36,6 @@ public class UI_Inventory : MonoBehaviour
     }
 
     private void RefreshInventoryItems() {
-        // foreach (Transform child in itemSlotContainer) {
         foreach (Transform child in itemSlotContainer) { 
             if (child == itemSlotTemplate) continue;
             Destroy(child.gameObject);
@@ -88,18 +87,12 @@ public class UI_Inventory : MonoBehaviour
         }
 
         public void OnPointerClick(PointerEventData eventData) {
+            if (player == null) player = FindObjectOfType<player>();
+            if (inventory == null && player != null) inventory = player.GetInventory();
+
             if (eventData.button == PointerEventData.InputButton.Left) {
                 // Use Item
-                Debug.Log("Click chuột trái: USE");
-                // inventory.UseItem(item);
-                Loader.Load(Loader.Scene.MainHome);
-            }
-            else if (eventData.button == PointerEventData.InputButton.Right) {
-                // Drop Item
-                Debug.Log("Click chuột phải: DROP");
-                Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
-                inventory.RemoveItem(item);
-                ItemWorld.DropItem(player.GetPosition(), duplicateItem);
+                player.UseItem(item);
             }
         }
     }
