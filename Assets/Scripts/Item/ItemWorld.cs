@@ -12,6 +12,15 @@ public class ItemWorld : MonoBehaviour {
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
+
+        // Set layer for text
+        foreach (Transform child in transform) {
+            Renderer childRenderer = child.GetComponent<Renderer>();
+            if (childRenderer != null) {
+                childRenderer.sortingLayerID = spriteRenderer.sortingLayerID;
+                childRenderer.sortingOrder = spriteRenderer.sortingOrder + 1;
+            }
+        }
     }
 
     public static ItemWorld SpawnItemWorld(Vector3 position, Item item, string itemUniqueId = "") {

@@ -932,6 +932,7 @@ MonoBehaviour:
   pfItemWorld: {fileID: 7774851269274377525, guid: 76f0c09cc76a5384a883c986137c29f0, type: 3}
   KeyBlueSprite: {fileID: 687878696, guid: a097c48d4d21a4043b98464cf215c6a0, type: 3}
   KeyWhiteSprite: {fileID: 1041891022, guid: 8db06c46cdebe254bbf0f5fbd14326df, type: 3}
+  CoinSprite: {fileID: 1066615039, guid: 5e836ad8e8fef564bbaae75113688020, type: 3}
 --- !u!4 &1367113725
 Transform:
   m_ObjectHideFlags: 0
