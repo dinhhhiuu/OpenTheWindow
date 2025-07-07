@@ -57,9 +57,9 @@ TagManager:
   - name: Frame
     uniqueID: 14295619
     locked: 0
-  - name: Item
-    uniqueID: 3674942227
-    locked: 0
   - name: Player
     uniqueID: 1255560265
+    locked: 0
+  - name: Item
+    uniqueID: 3674942227
     locked: 0
