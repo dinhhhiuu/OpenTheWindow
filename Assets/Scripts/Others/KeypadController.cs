@@ -6,6 +6,7 @@ using TMPro;
 public class KeypadController : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI inputText;
     [SerializeField] private string correctPassword = "1234";
+    [SerializeField] private GameObject key;
 
     private string currentInput = "";
     private int lengthInput = 5;
@@ -31,6 +32,7 @@ public class KeypadController : MonoBehaviour {
             Debug.Log("Correct Password");
             transform.parent.gameObject.SetActive(false);
             isCorrect = true;
+            key.SetActive(true);
         } else {
             currentInput = "";
             inputText.text = currentInput;

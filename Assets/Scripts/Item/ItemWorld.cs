@@ -24,7 +24,8 @@ public class ItemWorld : MonoBehaviour {
     }
 
     public static ItemWorld SpawnItemWorld(Vector3 position, Item item, string itemUniqueId = "") {
-        Transform transform = Instantiate(ItemAssets.Instance.pfItemWorld, position, Quaternion.identity);
+        Transform prefab = ItemAssets.Instance.GetPrefabByType(item.itemType);
+        Transform transform = Instantiate(prefab, position, Quaternion.identity);
         ItemWorld itemWorld = transform.GetComponent<ItemWorld>();
         itemWorld.SetItem(item, itemUniqueId);
         return itemWorld;

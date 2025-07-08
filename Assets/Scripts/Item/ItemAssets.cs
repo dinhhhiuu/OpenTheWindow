@@ -14,10 +14,22 @@ public class ItemAssets : MonoBehaviour {
         }
     }
 
-    public Transform pfItemWorld;
+    public Transform[] itemPrefabs;
+    public Sprite[] itemSprites;
 
-    public Sprite KeyBlueSprite;
-    public Sprite KeyWhiteSprite;
-    public Sprite CoinSprite;
+    public Transform GetPrefabByType(Item.ItemType itemType) {
+        int idx = (int)itemType;
+        if (idx >= 0 && idx < itemPrefabs.Length) {
+            return itemPrefabs[idx];
+        }
+        return null;
+    }
 
+    public Sprite GetSpriteByType(Item.ItemType itemType) {
+        int idx = (int)itemType;
+        if (idx >= 0 && idx < itemSprites.Length) {
+            return itemSprites[idx];
+        }
+        return null;
+    }
 }

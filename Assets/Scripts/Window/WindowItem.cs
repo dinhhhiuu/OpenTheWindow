@@ -8,15 +8,14 @@ public class WindowItem {
     public enum WindowType {
         KeyBlue,
         KeyWhite,
+        KeyRed,
+        KeyYellow,
+        KeyBlack,
     }
 
     public WindowType windowType;
 
     public Sprite GetSprite() {
-        switch (windowType) {
-            default:
-            case WindowType.KeyBlue: return WindowAssets.Instance.WindowBlueSprite;
-            case WindowType.KeyWhite: return WindowAssets.Instance.WindowWhiteSprite;
-        }
+        return WindowAssets.Instance.GetSpriteByType(windowType);
     }
 }

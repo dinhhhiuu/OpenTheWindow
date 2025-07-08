@@ -8,6 +8,9 @@ public class Item {
     public enum ItemType {
         KeyBlue,
         KeyWhite,
+        KeyRed,
+        KeyYellow,
+        KeyBlack,
         Coin,
     }
 
@@ -15,22 +18,19 @@ public class Item {
     public int amount;
 
     public Sprite GetSprite() {
-        switch (itemType) {
-            default:
-            case ItemType.KeyBlue: return ItemAssets.Instance.KeyBlueSprite;
-            case ItemType.KeyWhite: return ItemAssets.Instance.KeyWhiteSprite;
-            case ItemType.Coin: return ItemAssets.Instance.CoinSprite;
-        }
+        return ItemAssets.Instance.GetSpriteByType(itemType);
     }
 
     public bool IsStackable() {
         switch (itemType) {
             default:
-            case ItemType.KeyBlue:
-                return true;
             case ItemType.Coin:
                 return true;
             case ItemType.KeyWhite:
+            case ItemType.KeyBlue:
+            case ItemType.KeyRed:
+            case ItemType.KeyYellow:
+            case ItemType.KeyBlack:
                 return false;
         }
     }

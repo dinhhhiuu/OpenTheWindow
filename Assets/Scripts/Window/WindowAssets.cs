@@ -8,13 +8,28 @@ public class WindowAssets : MonoBehaviour {
     private void Awake() {
         if (Instance == null) {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         } else {
             Destroy(gameObject);
         }
     }
 
-    public Transform pfWindow;
+    public Transform[] windowPrefabs;
+    public Sprite[] windowSprites;
 
-    public Sprite WindowBlueSprite;
-    public Sprite WindowWhiteSprite;
+    public Transform GetPrefabByType(WindowItem.WindowType type) {
+        int idx = (int)type;
+        if (idx >= 0 && idx < windowPrefabs.Length) {
+            return windowPrefabs[idx];
+        }
+        return null;
+    }
+
+    public Sprite GetSpriteByType(WindowItem.WindowType type) {
+        int idx = (int)type;
+        if (idx >= 0 && idx < windowSprites.Length) {
+            return windowSprites[idx];
+        }
+        return null;
+    }
 }

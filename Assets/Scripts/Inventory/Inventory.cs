@@ -11,7 +11,7 @@ public class Inventory {
     public Inventory(Action<Item> useItemAction) {
         this.useItemAction = useItemAction;
         itemList = new List<Item>();
-        // AddItem(new Item {itemType = Item.ItemType.KeyBlue, amount = 1});
+        // AddItem(new Item {itemType = Item.ItemType.KeyWhite, amount = 1});
     }
 
     // Add Item
@@ -47,7 +47,16 @@ public class Inventory {
                 itemList.Remove(itemInInventory);
             }
         } else {
-            itemList.Remove(item);
+            Item itemToRemove = null;
+            foreach (Item inventoryItem in itemList) {
+                if (inventoryItem.itemType == item.itemType) {
+                    itemToRemove = inventoryItem;
+                    break;
+                }
+            }
+            if (itemToRemove != null) {
+                itemList.Remove(itemToRemove);
+            }
         }
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }

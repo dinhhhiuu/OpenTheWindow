@@ -43,7 +43,7 @@ public class UI_Inventory : MonoBehaviour
 
         int x = 0;
         int y = 0;
-        float itemSlotCellSize = 23f;
+        float itemSlotCellSize = 60f;
         foreach (Item item in inventory.GetItemList()) {
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
@@ -52,7 +52,7 @@ public class UI_Inventory : MonoBehaviour
             UI_ItemSlot slotClick = itemSlotRectTransform.gameObject.AddComponent<UI_ItemSlot>();
             slotClick.Setup(item, inventory, player);
 
-            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
+            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * (itemSlotCellSize - 10f));
             Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
             image.sprite = item.GetSprite();
 

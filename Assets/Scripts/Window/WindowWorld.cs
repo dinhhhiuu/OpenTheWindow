@@ -9,7 +9,7 @@ public class WindowWorld : MonoBehaviour {
     private Animator animator;
 
     private void Awake() {
-        spriteRenderer = GetComponent<SpriteRenderer>(); 
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start() {
@@ -20,7 +20,8 @@ public class WindowWorld : MonoBehaviour {
     }
 
     public static WindowWorld SpawnWindowWorld(Vector3 position, WindowItem windowItem, string itemUniqueId = "") {
-        Transform transform = Instantiate(WindowAssets.Instance.pfWindow, position, Quaternion.identity);
+        Transform prefab = WindowAssets.Instance.GetPrefabByType(windowItem.windowType);
+        Transform transform = Instantiate(prefab, position, Quaternion.identity);
         WindowWorld windowWorld = transform.GetComponent<WindowWorld>();
         windowWorld.SetWindow(windowItem, itemUniqueId);
         return windowWorld;
