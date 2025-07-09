@@ -751,6 +751,7 @@ MonoBehaviour:
   - {fileID: 8020297591413425202, guid: 131a1bf7b4336b349933ae5fc636671d, type: 3}
   - {fileID: 1760952522050850116, guid: 7273b7ff4f6d76644809912fb7f1ddde, type: 3}
   - {fileID: 6666860541080365311, guid: 6fd5258939b3a984cb1bd5eb92892a6c, type: 3}
+  - {fileID: 6666860541080365311, guid: 6fd5258939b3a984cb1bd5eb92892a6c, type: 3}
   itemSprites:
   - {fileID: 687878696, guid: a097c48d4d21a4043b98464cf215c6a0, type: 3}
   - {fileID: 1041891022, guid: 8db06c46cdebe254bbf0f5fbd14326df, type: 3}
@@ -758,6 +759,7 @@ MonoBehaviour:
   - {fileID: 1931072129, guid: 310a3697b1bc0c8449fdf9dcfd377e7e, type: 3}
   - {fileID: -2093045865, guid: bda0708062707f546b6d2feab0a27aba, type: 3}
   - {fileID: 1066615039, guid: 5e836ad8e8fef564bbaae75113688020, type: 3}
+  - {fileID: -105764406, guid: f40930306a8703242913886d458c0fd2, type: 3}
 --- !u!4 &1367113725
 Transform:
   m_ObjectHideFlags: 0

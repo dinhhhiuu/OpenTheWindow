@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class Sister : MonoBehaviour {
     private Animator animator;
+    [SerializeField] public SpeechBubbleController speechBubble;
+
+    private static bool isFullCoin = false;
 
     private void Start() {
         animator = GetComponent<Animator>();
+    }
+
+    private void Update() {
+        if (isFullCoin) {
+            GetComponent<Collider2D>().enabled = false;
+        }
     }
 
     private void OnMouseDown() {
@@ -15,6 +24,7 @@ public class Sister : MonoBehaviour {
 
         if (selectedItem == null) {
             Debug.Log("Chưa chọn vật phẩm");
+            speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho!!!");
         }
 
         if (selectedItem.itemType.ToString() == "Coin" && selectedItem.amount == 23) {
@@ -22,10 +32,18 @@ public class Sister : MonoBehaviour {
             player.GetInventory().RemoveItem(new Item { itemType = selectedItem.itemType, amount = 23 });
             player.UnSelectItem();
             player.GetInventory().AddItem(new Item { itemType = Item.ItemType.KeyBlue, amount = 1 });
-            animator.SetBool("isFullCoin", true);
+            isFullCoin = true;
+            speechBubble.Show("Đúng là anh trai của em!!");
         } else {
             Debug.Log("Sai vật phẩm");
+            speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho!!!");
             player.UnSelectItem();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider) {
+        if (collider.CompareTag("Player")) {
+            speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho!!!");
         }
     }
 }
