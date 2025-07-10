@@ -12,21 +12,34 @@ public class player : MonoBehaviour {
     [SerializeField] private UI_Inventory uiInventory;
     private static Item selectedItem;
 
+    private IEnumerator WaitForUIInventory() {
+        while (uiInventory == null) {
+            uiInventory = FindObjectOfType<UI_Inventory>();
+            if (uiInventory != null) {
+                uiInventory.SetInventory(inventory);
+                uiInventory.SetPlayer(this);
+                break;
+            }
+            yield return null;
+        }
+    }
+
+    private void Awake() {
+        DontDestroyOnLoad(gameObject); 
+    }
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         inventory = PlayerManager.Instance.Inventory;
-        uiInventory.SetInventory(inventory);
-        uiInventory.SetPlayer(this);
+        StartCoroutine(WaitForUIInventory());
     }
 
     private void Update() {
-        // Nhận input
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput = moveInput.normalized;
 
-        // Animator điều hướng
         if (moveInput.x != 0) {
             transform.localScale = new Vector3(moveInput.x > 0 ? 1 : -1, 1, 0);
             animator.SetBool("isRightLeft", true);
@@ -44,7 +57,6 @@ public class player : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        // Di chuyển mượt mà bằng Rigidbody2D
         rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
     }
 

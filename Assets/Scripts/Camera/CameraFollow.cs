@@ -4,6 +4,14 @@ public class CameraFollow : MonoBehaviour {
     public Transform target;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
+    void Start() {
+        // Lấy lại player nếu chưa gán
+        if (target == null) {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+                target = player.transform;
+        }
+    }
 
     void LateUpdate() {
         if (target == null) return;

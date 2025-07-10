@@ -13,6 +13,7 @@ public class ItemOnClick : MonoBehaviour {
         if (itemStateDict.ContainsKey(itemID) && itemStateDict[itemID]) {
             gameObject.SetActive(false);
         }
+        player = FindObjectOfType<player>();
     }
 
     private void OnMouseDown() {
