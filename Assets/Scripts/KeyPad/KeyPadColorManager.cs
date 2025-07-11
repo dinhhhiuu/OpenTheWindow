@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class KeyPadColorManager : MonoBehaviour {
     public KeyPadColorController[] colorControllers;
+    [SerializeField] private GameObject key;
+    public static bool isCorrect = false;
 
     public void CheckAllKeypads() {
         foreach (var kp in colorControllers)
@@ -13,6 +15,8 @@ public class KeyPadColorManager : MonoBehaviour {
         }
         Debug.Log("Đúng màu");
         transform.parent.gameObject.SetActive(false);
+        key.SetActive(true);
+        isCorrect = true;
     }
 
     public void ResetAllKeypads() {

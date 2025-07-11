@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -9,10 +7,15 @@ public class KeypadController : MonoBehaviour {
     [SerializeField] private GameObject key;
 
     private string currentInput = "";
-    private int lengthInput = 5;
-    private string charAnonymous = "*";
+    private const int lengthInput = 5;
+    private const string charAnonymous = "*";
+    private string nameKey;
 
     public static bool isCorrect = false;
+
+    private void Awake() {
+        nameKey = key.name;
+    }
 
     public void OnNumberPressed(string number) {
         if (currentInput.Length < lengthInput) {
@@ -32,7 +35,11 @@ public class KeypadController : MonoBehaviour {
             Debug.Log("Correct Password");
             transform.parent.gameObject.SetActive(false);
             isCorrect = true;
-            key.SetActive(true);
+
+            key.SetActive(true); 
+            if (KeyManager.Instance != null) {
+                KeyManager.Instance.SetKey(nameKey); 
+            }
         } else {
             currentInput = "";
             inputText.text = currentInput;
