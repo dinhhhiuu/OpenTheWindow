@@ -5,7 +5,8 @@ public class TriggerUIOnClick : MonoBehaviour
 {
     public enum UnlockCondition {
         Keypad,
-        KeypadColor
+        KeypadColor,
+        KeypadChar,
     }
 
     [SerializeField] private UnlockCondition unlockCondition;
@@ -47,6 +48,10 @@ public class TriggerUIOnClick : MonoBehaviour
                     break;
                 case UnlockCondition.KeypadColor:
                     if (KeyPadColorManager.isCorrect)
+                        itemStateDict[itemID] = true;
+                    break;
+                case UnlockCondition.KeypadChar:
+                    if (KeyPadCharManager.isCorrectChar)
                         itemStateDict[itemID] = true;
                     break;
             }
