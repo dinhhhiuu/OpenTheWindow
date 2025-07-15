@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Friend : MonoBehaviour {
+    [SerializeField] public SpeechBubbleController speechBubble;
+
+    private static bool isFullApple = false;
+
+    private void Update() {
+        if (isFullApple) {
+            GetComponent<Collider2D>().enabled = false;
+        }
+    }
+
+    private void OnMouseDown() {
+        player player = FindObjectOfType<player>();
+        Item selectedItem = player.GetSelectedItem();
+
+        if (selectedItem == null) {
+            Debug.Log("Chưa chọn vật phẩm");
+            speechBubble.Show("Đói quá bạn ei!");
+        } else if (selectedItem.itemType.ToString() != "Apple") {
+            Debug.Log("Sai vật phẩm");
+            speechBubble.Show("Này ăn được hả!");
+            player.UnSelectItem();
+        } else if (selectedItem.itemType.ToString() == "Apple") {
+            Debug.Log("Đúng vật phẩm");
+            speechBubble.Show("Hehe! Ngon đó!!");
+            player.GetInventory().RemoveItem(new Item { itemType = selectedItem.itemType, amount = 1 });
+            player.GetInventory().AddItem(new Item { itemType = Item.ItemType.KeyBlack, amount = 1 });
+            player.UnSelectItem();
+            isFullApple = true;
+        }
+    }
+}
