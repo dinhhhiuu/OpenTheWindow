@@ -16,6 +16,8 @@ public class KeyPadColorManager : MonoBehaviour {
         Debug.Log("Đúng màu");
         transform.parent.gameObject.SetActive(false);
         key.SetActive(true);
+        string nameKey = key.name;
+        KeyManager.Instance.SetKey(nameKey);
         isCorrect = true;
     }
 

@@ -6159,8 +6159,8 @@ GameObject:
   m_Component:
   - component: {fileID: 884173565}
   - component: {fileID: 884173564}
-  - component: {fileID: 884173566}
   - component: {fileID: 884173567}
+  - component: {fileID: 884173566}
   m_Layer: 0
   m_Name: WhiteSafe
   m_TagString: Untagged
@@ -6247,7 +6247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4d0514f7a8f1c4cb220e38bc187736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlockCondition: 0
+  unlockCondition: 2
   uiToshow: {fileID: 2019477014}
   key: {fileID: 275751182}
 --- !u!61 &884173567

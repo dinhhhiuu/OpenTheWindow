@@ -13,6 +13,7 @@ public class Item {
         KeyBlack,
         Coin,
         Sword,
+        Apple,
     }
 
     public ItemType itemType;
@@ -33,6 +34,7 @@ public class Item {
             case ItemType.KeyYellow:
             case ItemType.KeyBlack:
             case ItemType.Sword:
+            case ItemType.Apple:
                 return false;
         }
     }

@@ -30,4 +30,14 @@ public class ItemOnClick : MonoBehaviour {
         itemStateDict[itemID] = true;
         gameObject.SetActive(false);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        string tag = gameObject.tag;
+
+        if (collision.tag == "Player" && tag == "Apple") {
+            player.GetInventory().AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1 });
+            itemStateDict[itemID] = true;
+            gameObject.SetActive(false);
+        }
+    }
 }

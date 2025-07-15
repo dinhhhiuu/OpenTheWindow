@@ -15,6 +15,8 @@ public class KeyPadCharManager : MonoBehaviour {
         Debug.Log("Đúng ki tự");
         transform.parent.gameObject.SetActive(false);
         key.SetActive(true);
+        string nameKey = key.name;
+        KeyManager.Instance.SetKey(nameKey);
         isCorrectChar = true;
     }
 
