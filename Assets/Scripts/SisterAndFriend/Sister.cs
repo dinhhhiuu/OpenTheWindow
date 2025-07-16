@@ -23,7 +23,6 @@ public class Sister : MonoBehaviour {
         Item selectedItem = player.GetSelectedItem();
 
         if (selectedItem == null) {
-            Debug.Log("Chưa chọn vật phẩm");
             speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho!!!");
         }
 
@@ -34,6 +33,9 @@ public class Sister : MonoBehaviour {
             player.GetInventory().AddItem(new Item { itemType = Item.ItemType.KeyBlue, amount = 1 });
             isFullCoin = true;
             speechBubble.Show("Đúng là anh trai của em!!");
+        } else if (selectedItem.itemType.ToString() == "Coin" && selectedItem.amount != 23) {
+            speechBubble.Show("Keo thế kiếm thêm" + (23 - selectedItem.amount) + " đồng xu nữa đi!");
+            player.UnSelectItem();
         } else {
             Debug.Log("Sai vật phẩm");
             speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho!!!");

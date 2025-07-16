@@ -18,19 +18,22 @@ public class Friend : MonoBehaviour {
         Item selectedItem = player.GetSelectedItem();
 
         if (selectedItem == null) {
-            Debug.Log("Chưa chọn vật phẩm");
             speechBubble.Show("Đói quá bạn ei!");
         } else if (selectedItem.itemType.ToString() != "Apple") {
-            Debug.Log("Sai vật phẩm");
             speechBubble.Show("Này ăn được hả!");
             player.UnSelectItem();
         } else if (selectedItem.itemType.ToString() == "Apple") {
-            Debug.Log("Đúng vật phẩm");
             speechBubble.Show("Hehe! Ngon đó!!");
             player.GetInventory().RemoveItem(new Item { itemType = selectedItem.itemType, amount = 1 });
             player.GetInventory().AddItem(new Item { itemType = Item.ItemType.KeyBlack, amount = 1 });
             player.UnSelectItem();
             isFullApple = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider) {
+        if (collider.CompareTag("Player")) {
+            speechBubble.Show("Kiếm gì ăn đi rồi trả chìa khóa cho :)");
         }
     }
 }
