@@ -54,6 +54,9 @@ TagManager:
   - name: Carpet
     uniqueID: 4042192235
     locked: 0
+  - name: Coin
+    uniqueID: 3679191421
+    locked: 0
   - name: Wall
     uniqueID: 2434781853
     locked: 0

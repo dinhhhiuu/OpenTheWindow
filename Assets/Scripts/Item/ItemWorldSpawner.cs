@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ItemWorldSpawner : MonoBehaviour {
     public Item item;
-    public string itemUniqueId;
+    private string itemUniqueId;
 
     private void Awake() {
         // If player collected this item, don't spawn
+        itemUniqueId = gameObject.name;
         if (ItemSaveManager.Instance != null && ItemSaveManager.Instance.IsItemCollected(itemUniqueId)) {
             Destroy(gameObject);
             return;

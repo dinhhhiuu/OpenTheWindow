@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class WindowWorldSpawner : MonoBehaviour {
     public WindowItem window;
-    public string itemUniqueId;
+    private string itemUniqueId;
 
     private void Awake() {
+        itemUniqueId = gameObject.name;
         WindowWorld.SpawnWindowWorld(transform.position, window, itemUniqueId);
         Destroy(gameObject);
     }
