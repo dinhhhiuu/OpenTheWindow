@@ -114,11 +114,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 96
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 162
+        width: 31
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -886,6 +886,237 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 31
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74a47469dd9c494faaeafb295588ff6
+      internalID: -2079464961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 31
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0705bf5902c34cf429ea60b72c693829
+      internalID: -1341976552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 31
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054e17ceef6be89449f7c2a2e04d19a1
+      internalID: -874627692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 31
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b632f53a86e824aafed6c866dcb0b5
+      internalID: 413428317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 31
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56af7aa885efe7647b44b97dd730cf21
+      internalID: 91530007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_42
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 162
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78687ade7f45b884780e7f148ef7003d
+      internalID: 1299496855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_43
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 130
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7398aaa6eda1f5b418f64fa4b19b0ee3
+      internalID: -2122142133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_44
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 98
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bdfb80e740a91478e85fe23b2fabfc
+      internalID: -518718010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_45
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 66
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4609225ebd8ccc4493614c9b6ffff9c
+      internalID: 1558110018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_46
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 34
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74017df8f6e65e43a2ecca569bffe61
+      internalID: -283241353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doors_windows_animation_47
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 2
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f648616e2fafa39468d5cad60e1113d1
+      internalID: 672345791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -928,7 +1159,18 @@ TextureImporter:
       Doors_windows_animation_34: -836896879
       Doors_windows_animation_35: -1238771524
       Doors_windows_animation_36: -1516528608
+      Doors_windows_animation_37: -2079464961
+      Doors_windows_animation_38: -1341976552
+      Doors_windows_animation_39: -874627692
       Doors_windows_animation_4: 602714723
+      Doors_windows_animation_40: 413428317
+      Doors_windows_animation_41: 91530007
+      Doors_windows_animation_42: 1299496855
+      Doors_windows_animation_43: -2122142133
+      Doors_windows_animation_44: -518718010
+      Doors_windows_animation_45: 1558110018
+      Doors_windows_animation_46: -283241353
+      Doors_windows_animation_47: 672345791
       Doors_windows_animation_5: 481422010
       Doors_windows_animation_6: 1770437632
       Doors_windows_animation_7: -1977827125
