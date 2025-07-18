@@ -22,4 +22,8 @@ public class WindowSaveManager : MonoBehaviour {
     public bool IsWindowCollected(string windowuniqueId) {
         return collectedWindows.Contains(windowuniqueId);
     }
+
+    public int GetCollectedWindowCount() {
+        return collectedWindows.Count;
+    }
 }

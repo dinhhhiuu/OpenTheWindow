@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class player : MonoBehaviour {
+    public static player Instance { get; private set; }
+
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Animator animator;
@@ -25,7 +27,12 @@ public class player : MonoBehaviour {
     }
 
     private void Awake() {
-        DontDestroyOnLoad(gameObject); 
+        if (Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
+            Destroy(gameObject);
+        }
     }
 
     private void Start() {
@@ -65,6 +72,9 @@ public class player : MonoBehaviour {
         if (itemWorld != null) {
             inventory.AddItem(itemWorld.GetItem());
             itemWorld.Collect();
+        }
+        if (collider.CompareTag("Coin")) {
+            AudioManager.Instance.PlayCoinSound();
         }
     }
 

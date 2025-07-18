@@ -14,6 +14,7 @@ public static class Loader {
         Kitchen,
         Laboratory,
         Storage,
+        Start,
     }
     private static Action onLoaderCallback;
 

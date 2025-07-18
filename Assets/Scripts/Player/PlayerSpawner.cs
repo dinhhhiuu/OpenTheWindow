@@ -9,9 +9,9 @@ public class PlayerSpawner : MonoBehaviour {
     private void Start() {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        if (player != null && PlayerSpawnData.lastDoorID != null) {
+        if (player != null && PlayerSpawnData.Instance.GetLastDoorID() != null) {
             for (int i = 0; i < spawnPoints.Length; i++) {
-                if (spawnIDs[i] == PlayerSpawnData.lastDoorID) {
+                if (spawnIDs[i] == PlayerSpawnData.Instance.GetLastDoorID()) {
                     player.transform.position = spawnPoints[i].position;
                     break;
                 }

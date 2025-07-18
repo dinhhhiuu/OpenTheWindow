@@ -1,12 +1,14 @@
 using UnityEngine;
 
 public class PersistCanvas : MonoBehaviour {
-    void Awake() {
-        // Đảm bảo chỉ tồn tại 1 Canvas duy nhất
-        if (FindObjectsOfType<Canvas>().Length > 1) {
+    public static PersistCanvas Instance { get; private set; }
+    
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
             Destroy(gameObject);
-            return;
         }
-        DontDestroyOnLoad(gameObject);
     }
 }
