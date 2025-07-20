@@ -18,7 +18,7 @@ public class Sister : MonoBehaviour {
         }
     }
 
-    private void OnMouseDown() {
+    public void OnMouseDown() {
         player player = FindObjectOfType<player>();
         Item selectedItem = player.GetSelectedItem();
 
@@ -40,12 +40,6 @@ public class Sister : MonoBehaviour {
             Debug.Log("Sai vật phẩm");
             speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho!!!");
             player.UnSelectItem();
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.CompareTag("Player")) {
-            speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho!!!");
         }
     }
 }

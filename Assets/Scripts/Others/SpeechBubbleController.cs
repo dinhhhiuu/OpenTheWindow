@@ -9,7 +9,7 @@ public class SpeechBubbleController : MonoBehaviour {
 
     private Coroutine typingCoroutine;
 
-    public void Show(string message, float duration = 3f, float typeDelay = 0.05f) {
+    public void Show(string message, float duration = 0.5f, float typeDelay = 0.05f) {
         if (typingCoroutine != null) {
             StopCoroutine(typingCoroutine);
         }

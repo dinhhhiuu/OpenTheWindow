@@ -9,6 +9,7 @@ TagManager:
   - Budget
   - Apple
   - Coin
+  - WalkableZone
   layers:
   - Default
   - TransparentFX

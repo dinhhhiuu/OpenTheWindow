@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class player : MonoBehaviour {
     public static player Instance { get; private set; }
@@ -8,23 +9,19 @@ public class player : MonoBehaviour {
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Animator animator;
-    private Vector2 moveInput;
+
+    private Vector3 targetPosition;
+    private bool isMoving = false;
 
     private Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
     private static Item selectedItem;
 
-    private IEnumerator WaitForUIInventory() {
-        while (uiInventory == null) {
-            uiInventory = FindObjectOfType<UI_Inventory>();
-            if (uiInventory != null) {
-                uiInventory.SetInventory(inventory);
-                uiInventory.SetPlayer(this);
-                break;
-            }
-            yield return null;
-        }
-    }
+    [SerializeField] private string walkableTag = "WalkableZone";
+
+    // Xử lí va chạm wall
+    [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private float wallCheckDistance = 1f;
 
     private void Awake() {
         if (Instance == null) {
@@ -40,31 +37,98 @@ public class player : MonoBehaviour {
         animator = GetComponent<Animator>();
         inventory = PlayerManager.Instance.Inventory;
         StartCoroutine(WaitForUIInventory());
+
+        targetPosition = transform.position;
+    }
+
+    private IEnumerator WaitForUIInventory() {
+        while (uiInventory == null) {
+            uiInventory = FindObjectOfType<UI_Inventory>();
+            if (uiInventory != null) {
+                uiInventory.SetInventory(inventory);
+                uiInventory.SetPlayer(this);
+                break;
+            }
+            yield return null;
+        }
     }
 
     private void Update() {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
-        moveInput = moveInput.normalized;
-
-        if (moveInput.x != 0) {
-            transform.localScale = new Vector3(moveInput.x > 0 ? 1 : -1, 1, 0);
-            animator.SetBool("isRightLeft", true);
-        } else {
-            animator.SetBool("isRightLeft", false);
-        }
-
-        if (moveInput.y != 0) {
-            animator.SetBool("isBehind", moveInput.y > 0);
-            animator.SetBool("isAhead", moveInput.y < 0);
-        } else {
-            animator.SetBool("isBehind", false);
-            animator.SetBool("isAhead", false);
-        }
+        HandleMouseClick();
     }
 
     private void FixedUpdate() {
-        rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
+        if (isMoving) {
+            Vector3 direction = (targetPosition - (Vector3)rb.position).normalized;
+            RaycastHit2D wallHit = Physics2D.Raycast(rb.position, direction, wallCheckDistance, wallLayer);
+
+            if (wallHit.collider != null) {
+                isMoving = false;
+                animator.SetBool("isRightLeft", false);
+                animator.SetBool("isAhead", false);
+                animator.SetBool("isBehind", false);
+                return;
+            }
+
+            Vector3 newPos = Vector3.MoveTowards((Vector3)rb.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(newPos);
+
+            if (Vector3.Distance((Vector3)rb.position, targetPosition) < 0.01f) {
+                isMoving = false;
+                animator.SetBool("isRightLeft", false);
+                animator.SetBool("isAhead", false);
+                animator.SetBool("isBehind", false);
+            }
+        }
+    }
+
+    private void HandleMouseClick() {
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
+
+        if (Input.GetMouseButtonDown(0)) {
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorldPos.z = 0;
+
+            RaycastHit2D[] hits = Physics2D.RaycastAll(mouseWorldPos, Vector2.zero);
+
+            foreach (RaycastHit2D hit in hits) {
+                ItemOnClick item = hit.collider.GetComponent<ItemOnClick>();
+                if (item != null) {
+                    item.Interact(this);
+                    return;
+                }
+                Friend friend = hit.collider.GetComponent<Friend>();
+                if (friend != null) {
+                    friend.OnMouseDown();
+                    return;
+                }
+                Sister sister = hit.collider.GetComponent<Sister>();
+                if (sister != null) {
+                    sister.OnMouseDown();
+                    return;
+                }
+            }
+
+            Collider2D hitZone = Physics2D.OverlapPoint(mouseWorldPos);
+            if (hitZone != null && hitZone.CompareTag(walkableTag)) {
+                targetPosition = mouseWorldPos;
+                isMoving = true;
+
+                Vector3 direction = (targetPosition - transform.position).normalized;
+                if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y)) {
+                    transform.localScale = new Vector3(direction.x > 0 ? 1 : -1, 1, 1);
+                    animator.SetBool("isRightLeft", true);
+                    animator.SetBool("isAhead", false);
+                    animator.SetBool("isBehind", false);
+                } else {
+                    animator.SetBool("isRightLeft", false);
+                    animator.SetBool("isBehind", direction.y > 0);
+                    animator.SetBool("isAhead", direction.y < 0);
+                }
+            } else {
+                Debug.Log("Click ngoài vùng cho phép!");
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
@@ -96,5 +160,11 @@ public class player : MonoBehaviour {
 
     public Inventory GetInventory() {
         return inventory;
+    }
+
+    // Vẽ điểm đích để debug
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(targetPosition, 1f);
     }
 }

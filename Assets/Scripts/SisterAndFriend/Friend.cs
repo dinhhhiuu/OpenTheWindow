@@ -13,7 +13,7 @@ public class Friend : MonoBehaviour {
         }
     }
 
-    private void OnMouseDown() {
+    public void OnMouseDown() {
         player player = FindObjectOfType<player>();
         Item selectedItem = player.GetSelectedItem();
 
@@ -28,12 +28,6 @@ public class Friend : MonoBehaviour {
             player.GetInventory().AddItem(new Item { itemType = Item.ItemType.KeyBlack, amount = 1 });
             player.UnSelectItem();
             isFullApple = true;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.CompareTag("Player")) {
-            speechBubble.Show("Kiếm gì ăn đi rồi trả chìa khóa cho :)");
         }
     }
 }
