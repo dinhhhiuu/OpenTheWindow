@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyManager  : MonoBehaviour {
+public class KeyManager : MonoBehaviour {
     public static KeyManager Instance {get; private set;}
-
     private HashSet<string> keyStates = new HashSet<string>();
 
     private void Awake() {

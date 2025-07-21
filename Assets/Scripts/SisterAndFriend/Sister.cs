@@ -34,7 +34,7 @@ public class Sister : MonoBehaviour {
             isFullCoin = true;
             speechBubble.Show("Đúng là anh trai của em!!");
         } else if (selectedItem.itemType.ToString() == "Coin" && selectedItem.amount != 23) {
-            speechBubble.Show("Keo thế kiếm thêm" + (23 - selectedItem.amount) + " đồng xu nữa đi!");
+            speechBubble.Show("Keo thế kiếm thêm " + (23 - selectedItem.amount) + " đồng xu nữa đi!");
             player.UnSelectItem();
         } else {
             Debug.Log("Sai vật phẩm");

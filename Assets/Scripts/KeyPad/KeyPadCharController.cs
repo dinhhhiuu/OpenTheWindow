@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class KeyPadCharController : MonoBehaviour {
@@ -12,15 +13,17 @@ public class KeyPadCharController : MonoBehaviour {
         o,
     }
 
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Sprite[] sprite;
+    [SerializeField] private Image image;
+
     private CharWindow currentChar = CharWindow.w;
-    private List<string> charList = new List<string> { "w", "i", "n", "d", "o" };
     public CharWindow correctChar;
 
     public void ChangeChar() {
-        int nextChar = ((int)currentChar + 1) % charList.Count;
+        int nextChar = ((int)currentChar + 1) % sprite.Length;
         currentChar = (CharWindow)nextChar;
-        text.text = charList[nextChar].ToString();
+        image.sprite = sprite[nextChar];
     }
 
     public bool isCorrectChar() {
@@ -29,6 +32,6 @@ public class KeyPadCharController : MonoBehaviour {
 
     public void ResetChar() {
         currentChar = CharWindow.w;
-        text.text = "";
+        image.sprite = defaultSprite;
     }
 }

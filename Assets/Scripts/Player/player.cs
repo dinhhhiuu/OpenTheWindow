@@ -95,6 +95,7 @@ public class player : MonoBehaviour {
                 ItemOnClick item = hit.collider.GetComponent<ItemOnClick>();
                 if (item != null) {
                     item.Interact(this);
+                    AudioEffectManager.Instance.PlayPickItemSound();
                     return;
                 }
                 Friend friend = hit.collider.GetComponent<Friend>();
@@ -138,7 +139,9 @@ public class player : MonoBehaviour {
             itemWorld.Collect();
         }
         if (collider.CompareTag("Coin")) {
-            AudioManager.Instance.PlayCoinSound();
+            AudioEffectManager.Instance.PlayCoinSound();
+        } else if (collider.CompareTag("Apple")) {
+            AudioEffectManager.Instance.PlayPickItemSound();
         }
     }
 

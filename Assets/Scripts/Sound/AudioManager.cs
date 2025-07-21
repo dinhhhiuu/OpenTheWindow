@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
     [SerializeField] private AudioSource backgroundAudioSource;
-    [SerializeField] private AudioSource effectAudioSource;
 
     [SerializeField] private AudioClip backGroundClip;
-    [SerializeField] private AudioClip coinClip;
 
     public static AudioManager Instance { get; private set; }
 
@@ -31,9 +29,5 @@ public class AudioManager : MonoBehaviour {
 
     public void PauseBackGroundMusic() {
         backgroundAudioSource.Pause();
-    }
-
-    public void PlayCoinSound() {
-        effectAudioSource.PlayOneShot(coinClip);
     }
 }

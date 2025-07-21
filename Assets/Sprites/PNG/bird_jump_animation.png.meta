@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,1267 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: bird_jump_animation_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 79
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cdbfc4c4be00d44b621a95bbea214d
+      internalID: 597718692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 79
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829d285defec24d4d8772d560e70ec03
+      internalID: 1711706679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21370194d0af9d34995129bc2c0bf2d2
+      internalID: 1121233656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 82
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1899db5485cb9408ac0d2896a6f2a9
+      internalID: -130098795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 79
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96258e19d3d53e748aef6743ea6993f1
+      internalID: 844664910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 76
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8608603cd425aaf4f9b91b24beaa37ea
+      internalID: -1325025235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_6
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 75
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37bc0f5ef610cc84da80969f658197f1
+      internalID: -359013593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_7
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 72
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd4db894d9fc58418141bb3b945b39c
+      internalID: -1474500855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_8
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 69
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd41a072ddd7224f80ac93c15f4b388
+      internalID: 1462049230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_9
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 68
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701dbf7ba0aecd54ab6426b61e0baf9e
+      internalID: -1574158054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_10
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 79
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a746a618208b0e64ca56502050812953
+      internalID: -711876823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 79
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981cee8e021cc85439d57406dc2a9eaa
+      internalID: 170700439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_12
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2199a50abb9bd3a4484063d6ac57f488
+      internalID: -2083716849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_13
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 83
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fe7b8d5c4ee1f4bb2c3861782cd532
+      internalID: -750744255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_14
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 78
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64680e6a64f4c4146b62651cdaa49104
+      internalID: 538200235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_15
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 76
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19996c5e331e3294b8f7ceff93475ba1
+      internalID: -1941688000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_16
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 72
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadeab52fb60cb84b97be1081fa26b0c
+      internalID: -1708868099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_17
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 70
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705e6bde05aaae64f96e3836ce8d8b51
+      internalID: 339733052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_18
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 67
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03873a7ece8e5142b314124ff3e32a3
+      internalID: 978719593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_19
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 65
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdbb4014251d70458b3d5a9e1b0c34d
+      internalID: -1608168725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_20
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 47
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cf028a3b8fd58478419ea4edd5fed6
+      internalID: 1033623496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_21
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 47
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4979412d87e1304e9621a8aa313ab64
+      internalID: 709917123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_22
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 51
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aff9bac3116ed34eaea06f33392b4d4
+      internalID: 1196469688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_23
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 50
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81b30f280c28ff42900e63a83b8b19e
+      internalID: -494467187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_24
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 47
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b2c92b1d16a2044b7832dd26114add
+      internalID: 283219526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_25
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 44
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1854b7d080d742143baaeca68c380588
+      internalID: 1514094082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_26
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 43
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fff45ceb313c124488f1190e5faa06f
+      internalID: 1242079519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_27
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 40
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d545937896d4243b1f46ca6abfdb17
+      internalID: -539604632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_28
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 37
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777c9ec5657c5c74cb131cdbffabe4ea
+      internalID: 1220201534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_29
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 36
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0510e0b50b224af4c9366b2f4915d823
+      internalID: 1836795416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_30
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 47
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4397fb91529ff194988dec78e7289148
+      internalID: -1582048566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_31
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 47
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f33b0a400d0d34eb5d68d94453eeaa
+      internalID: 1735137963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_32
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 51
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756c420358c86c7488612d234ce02b1b
+      internalID: -517432254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_33
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 51
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5bbedfdbc730a4bb94c7bb5527d7d7
+      internalID: -675587256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_34
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 46
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0773d623470d84a4383d8ee8ffe15ecd
+      internalID: -1812573580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_35
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 44
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4941570ef831cba438af9661136140f5
+      internalID: -583849939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_36
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 40
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddd59174596b5349b630df216cc6dac
+      internalID: -38931553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_37
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 38
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc69be967f2aec846864f8080d648674
+      internalID: -1486902870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_38
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 35
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef56602432b0f2c41aa179561402793a
+      internalID: 1418888673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_39
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 33
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51af447d985cb242abb09af762a92f1
+      internalID: -1200814429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_40
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 15
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3dcb44965775142b142976b7cb8c84
+      internalID: 721911171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_41
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 15
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd57b872dd319945aa3973a1e8f0b37
+      internalID: 1819809929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_42
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 19
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9a8ad51951e434f8a01faf20c3eaf8
+      internalID: 247272956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_43
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 18
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d456793f095174f9b450d55f05cf00
+      internalID: 640587792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_44
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 15
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8745f86501e32438e6fc0c266448cb
+      internalID: 1903834729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_45
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 12
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f65bb909f471fd4f821f07e0ab18a71
+      internalID: -404923355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_46
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 11
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42466875d2cdee9448bb2156e949f482
+      internalID: 254313267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_47
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 8
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34bcac89c1f97a49b1502188517700d
+      internalID: 224153686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_48
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 5
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d4c81eafcc1034f97a783740ae5c2c
+      internalID: 1929699373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_49
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 4
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7ad06d34f0a754a9106fa09fb84dff
+      internalID: -315043437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_50
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 15
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693af7bc32cfb824381a74fb3cff6678
+      internalID: 1123760145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_51
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 15
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bfb2722549bd8649a00ab3bcde82080
+      internalID: -884361688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_52
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 19
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cdaf4f559f5674a926fde52f8ab543
+      internalID: -910093862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_53
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 19
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6bf6aea725f6a49addce19526e7aeb
+      internalID: -292868448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_54
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 14
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a854720d517af446a0418ae987b006c
+      internalID: -1143019457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_55
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 12
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38e611ac529f6e489a844ab65c9e662
+      internalID: 1590567557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_56
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 8
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f09b26c3533514da024ff7226cdd9b
+      internalID: -1788529159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_57
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 6
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14635b877f1288c4490e7fb1942702df
+      internalID: -297759641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_58
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 3
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ee8268e8abd8d43b79c58fde505ccd
+      internalID: 843317579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_jump_animation_59
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6079ff0d5e0894e9c362ae31dca983
+      internalID: -325518209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +1379,67 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bird_jump_animation_0: 597718692
+      bird_jump_animation_1: 1711706679
+      bird_jump_animation_10: -711876823
+      bird_jump_animation_11: 170700439
+      bird_jump_animation_12: -2083716849
+      bird_jump_animation_13: -750744255
+      bird_jump_animation_14: 538200235
+      bird_jump_animation_15: -1941688000
+      bird_jump_animation_16: -1708868099
+      bird_jump_animation_17: 339733052
+      bird_jump_animation_18: 978719593
+      bird_jump_animation_19: -1608168725
+      bird_jump_animation_2: 1121233656
+      bird_jump_animation_20: 1033623496
+      bird_jump_animation_21: 709917123
+      bird_jump_animation_22: 1196469688
+      bird_jump_animation_23: -494467187
+      bird_jump_animation_24: 283219526
+      bird_jump_animation_25: 1514094082
+      bird_jump_animation_26: 1242079519
+      bird_jump_animation_27: -539604632
+      bird_jump_animation_28: 1220201534
+      bird_jump_animation_29: 1836795416
+      bird_jump_animation_3: -130098795
+      bird_jump_animation_30: -1582048566
+      bird_jump_animation_31: 1735137963
+      bird_jump_animation_32: -517432254
+      bird_jump_animation_33: -675587256
+      bird_jump_animation_34: -1812573580
+      bird_jump_animation_35: -583849939
+      bird_jump_animation_36: -38931553
+      bird_jump_animation_37: -1486902870
+      bird_jump_animation_38: 1418888673
+      bird_jump_animation_39: -1200814429
+      bird_jump_animation_4: 844664910
+      bird_jump_animation_40: 721911171
+      bird_jump_animation_41: 1819809929
+      bird_jump_animation_42: 247272956
+      bird_jump_animation_43: 640587792
+      bird_jump_animation_44: 1903834729
+      bird_jump_animation_45: -404923355
+      bird_jump_animation_46: 254313267
+      bird_jump_animation_47: 224153686
+      bird_jump_animation_48: 1929699373
+      bird_jump_animation_49: -315043437
+      bird_jump_animation_5: -1325025235
+      bird_jump_animation_50: 1123760145
+      bird_jump_animation_51: -884361688
+      bird_jump_animation_52: -910093862
+      bird_jump_animation_53: -292868448
+      bird_jump_animation_54: -1143019457
+      bird_jump_animation_55: 1590567557
+      bird_jump_animation_56: -1788529159
+      bird_jump_animation_57: -297759641
+      bird_jump_animation_58: 843317579
+      bird_jump_animation_59: -325518209
+      bird_jump_animation_6: -359013593
+      bird_jump_animation_7: -1474500855
+      bird_jump_animation_8: 1462049230
+      bird_jump_animation_9: -1574158054
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

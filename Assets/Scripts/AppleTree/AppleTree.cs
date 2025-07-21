@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour {
     private Animator animator;
-
     private static bool isCut = false;
     [SerializeField] private GameObject apple;
 

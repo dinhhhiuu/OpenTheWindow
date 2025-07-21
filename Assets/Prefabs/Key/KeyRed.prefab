@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4803160710972696086}
   m_Layer: 0
   m_Name: KeyRed
-  m_TagString: Untagged
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -620025069
-  m_SortingLayer: 7
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 912017179, guid: e27d578dfd5db9148a936bdeedd307fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

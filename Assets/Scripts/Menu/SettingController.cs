@@ -73,6 +73,7 @@ public class SettingController : MonoBehaviour {
 
     private void Winning() {
         if (WindowSaveManager.Instance.GetCollectedWindowCount() == 5) {
+            AudioEffectManager.Instance.PlayWinSound();
             winPanel.SetActive(true);
         }
     }
