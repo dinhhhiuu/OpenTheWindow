@@ -8,10 +8,17 @@ public class SettingController : MonoBehaviour {
     [SerializeField] private GameObject winPanel;
 
     private static bool isTurnSound = true;
+    private static bool isWin = false;
     [SerializeField] private Loader.Scene targetScene;
 
     private void Update() {
         Winning();
+        if (isWin) {
+            AudioEffectManager.Instance.PlayWinSound();
+            winPanel.SetActive(true);
+            DestroyPersistentObjects();
+            isWin = false;
+        }
     }
 
     public void SetPanel() {
@@ -69,12 +76,16 @@ public class SettingController : MonoBehaviour {
 
         if (player.Instance != null)
             Destroy(player.Instance.gameObject);
+        
+        KeypadController.Reset();
+        KeyPadColorManager.Reset();
+        KeyPadCharManager.Reset();
+        TriggerUIOnClick.ResetItemStateDict();
     }
 
     private void Winning() {
         if (WindowSaveManager.Instance.GetCollectedWindowCount() == 5) {
-            AudioEffectManager.Instance.PlayWinSound();
-            winPanel.SetActive(true);
+            isWin = true;
         }
     }
 }

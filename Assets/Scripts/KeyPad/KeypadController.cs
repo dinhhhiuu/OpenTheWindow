@@ -46,4 +46,8 @@ public class KeypadController : MonoBehaviour {
             Debug.Log("Wrong Password");
         }
     }
+
+    public static void Reset() {
+        isCorrect = false;
+    }
 }

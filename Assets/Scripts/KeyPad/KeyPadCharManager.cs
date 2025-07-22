@@ -26,4 +26,8 @@ public class KeyPadCharManager : MonoBehaviour {
         }
         transform.parent.gameObject.SetActive(false);
     }
+
+    public static void Reset() {
+        isCorrectChar = false;
+    }
 }

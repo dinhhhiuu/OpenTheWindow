@@ -3555,7 +3555,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1299986391, guid: 0e19a71a4805e5c4eaa325b78df53238, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3814,7 +3814,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1299986391, guid: 0e19a71a4805e5c4eaa325b78df53238, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5959,7 +5959,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1299986391, guid: 0e19a71a4805e5c4eaa325b78df53238, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6078,8 +6078,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Thu th\u1EADp 5 ch\xECa kh\xF3a b\u1EB1ng c\xE1ch gi\u1EA3i c\xE1c m\u1EADt
-    m\xE3 v\xE0 y\xEAu c\u1EA7u c\u1EE7a NPC\nS\u1EED d\u1EE5ng chu\u1ED9t \u0111\u1EC3
-    di chuy\u1EC3n, thu th\u1EADp v\xE0 gi\u1EA3i m\xE3"
+    m\xE3 v\xE0 y\xEAu c\u1EA7u c\u1EE7a NPC \u0111\u1EC3 m\u1EDF c\u1EEDa.\nS\u1EED
+    d\u1EE5ng chu\u1ED9t \u0111\u1EC3 di chuy\u1EC3n, thu th\u1EADp v\xE0 gi\u1EA3i
+    m\xE3."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

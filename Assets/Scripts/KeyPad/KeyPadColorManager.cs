@@ -27,4 +27,8 @@ public class KeyPadColorManager : MonoBehaviour {
         }
         transform.parent.gameObject.SetActive(false);
     }
+
+    public static void Reset() {
+        isCorrect = false;
+    }
 }
