@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour {
     private Animator animator;
-    private static bool isCut = false;
+    public static AppleTree Instance { get; private set; }
+
+    private bool isCut = false;
     [SerializeField] private GameObject apple;
 
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Destroy(gameObject);
+        }
+    }
+    
     private void Start() {
         animator = GetComponent<Animator>();
     }

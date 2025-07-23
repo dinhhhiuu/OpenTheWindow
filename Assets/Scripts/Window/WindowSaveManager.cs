@@ -26,4 +26,8 @@ public class WindowSaveManager : MonoBehaviour {
     public int GetCollectedWindowCount() {
         return collectedWindows.Count;
     }
+
+    public void ResetCollectedWindows() {
+        collectedWindows.Clear();
+    }
 }

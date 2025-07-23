@@ -16,7 +16,9 @@ public class SettingController : MonoBehaviour {
         if (isWin) {
             AudioEffectManager.Instance.PlayWinSound();
             winPanel.SetActive(true);
-            DestroyPersistentObjects();
+            WindowSaveManager.Instance.ResetCollectedWindows();
+            if (AudioManager.Instance != null)
+                Destroy(AudioManager.Instance.gameObject);
             isWin = false;
         }
     }
@@ -76,11 +78,21 @@ public class SettingController : MonoBehaviour {
 
         if (player.Instance != null)
             Destroy(player.Instance.gameObject);
+
+        if (Sister.Instance != null)
+            Destroy(Sister.Instance.gameObject);
+        
+        if (Friend.Instance != null)
+            Destroy(Friend.Instance.gameObject);
+
+        if (AppleTree.Instance != null)
+            Destroy(AppleTree.Instance.gameObject);
         
         KeypadController.Reset();
         KeyPadColorManager.Reset();
         KeyPadCharManager.Reset();
         TriggerUIOnClick.ResetItemStateDict();
+        ItemOnClick.ResetItemStateDict();
     }
 
     private void Winning() {

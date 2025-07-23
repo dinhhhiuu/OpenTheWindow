@@ -58,7 +58,6 @@ public class TriggerUIOnClick : MonoBehaviour
             itemStateDict[itemID] = false;
 
         if (!itemStateDict[itemID]) {
-            if (!cachedCollider.enabled) Debug.Log($"{gameObject.name} collider will be enabled in Update");
             cachedCollider.enabled = true;
             switch (unlockCondition) {
                 case UnlockCondition.Keypad:
@@ -79,7 +78,6 @@ public class TriggerUIOnClick : MonoBehaviour
         if (itemStateDict[itemID])
         {
             if (cachedCollider.enabled) {
-            Debug.Log($"{gameObject.name} collider will be disabled in Update");
             cachedCollider.enabled = false;
         }
         }
@@ -90,7 +88,6 @@ public class TriggerUIOnClick : MonoBehaviour
         itemStateDict[itemID] = false;
         if (cachedCollider != null) {
             cachedCollider.enabled = true;
-            Debug.Log($"{gameObject.name} collider enabled in ResetInstanceState");
         }
         if (uiToshow != null)
             uiToshow.SetActive(false);

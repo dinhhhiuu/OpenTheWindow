@@ -5,8 +5,17 @@ using UnityEngine;
 public class Sister : MonoBehaviour {
     private Animator animator;
     [SerializeField] public SpeechBubbleController speechBubble;
+    public static Sister Instance { get; private set; }
 
-    private static bool isFullCoin = false;
+    private bool isFullCoin = false;
+
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start() {
         animator = GetComponent<Animator>();

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemOnClick : MonoBehaviour {
     private static Dictionary<string, bool> itemStateDict = new Dictionary<string, bool>();
+    private static List<ItemOnClick> allInstances = new List<ItemOnClick>();
 
     private string itemID;
 
@@ -15,6 +16,11 @@ public class ItemOnClick : MonoBehaviour {
         if (itemStateDict.ContainsKey(itemID) && itemStateDict[itemID]) {
             gameObject.SetActive(false);
         }
+        allInstances.Add(this);
+    }
+
+    private void OnDestroy() {
+        allInstances.Remove(this);
     }
 
     public void Interact(player player) {
@@ -34,6 +40,18 @@ public class ItemOnClick : MonoBehaviour {
                 itemStateDict[itemID] = true;
                 gameObject.SetActive(false);
             }
+        }
+    }
+
+    public void ResetInstanceState() {
+        itemStateDict[itemID] = false;
+        gameObject.SetActive(true);
+    }
+
+    public static void ResetItemStateDict() {
+        itemStateDict = new Dictionary<string, bool>();
+        foreach (var instance in allInstances) {
+            instance.ResetInstanceState();
         }
     }
 }

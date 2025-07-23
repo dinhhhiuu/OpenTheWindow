@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class Friend : MonoBehaviour {
     [SerializeField] public SpeechBubbleController speechBubble;
+    public static Friend Instance { get; private set; }
 
-    private static bool isFullApple = false;
+    private bool isFullApple = false;
+
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Destroy(gameObject);
+        }
+    }
 
     private void Update() {
         if (isFullApple) {
