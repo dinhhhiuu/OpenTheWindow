@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0b1e64af7e0f2644f9b509ebd8dfb42e
+guid: 83e42e1bd0973804e9e3a6b014938418
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,43 +110,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Keyboard_mix 1_0
+      name: Keyboard_mix (3)_0
       rect:
         serializedVersion: 2
-        x: 1919
-        y: 61
-        width: 281
-        height: 99
+        x: 480
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f247ed0553f177644a54c1fdfa53cfe5
-      internalID: 1487015325
+      spriteID: c524222602bef964a9f82f0dd7cac57e
+      internalID: -452542797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard_mix 1_1
+      name: Keyboard_mix (3)_1
       rect:
         serializedVersion: 2
-        x: 2249
-        y: 0
-        width: 164
-        height: 162
+        x: 1280
+        y: 159
+        width: 159
+        height: 161
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6835602b1cc09f14d879ae2f0b9ea05b
-      internalID: 1430887622
+      spriteID: d1bb7694f9b1e7341bc99a0885abeb0e
+      internalID: -514008373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard_mix (3)_2
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 0
+        width: 480
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e421aab741def04bb99f195fff1f240
+      internalID: 1005107175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard_mix (3)_3
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 159
+        width: 159
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aedf089759b91745a348ef9de4d87e2
+      internalID: 147030971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard_mix (3)_4
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 158
+        width: 162
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0e62ce4d1180a49825dccf96556fe6
+      internalID: -991310953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard_mix (3)_5
+      rect:
+        serializedVersion: 2
+        x: 3519
+        y: 160
+        width: 162
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecedec48159511545823e14174b38570
+      internalID: -1349115743
       vertices: []
       indices: 
       edges: []
@@ -162,8 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Keyboard_mix 1_0: 1487015325
-      Keyboard_mix 1_1: 1430887622
+      Keyboard_mix (3)_0: -452542797
+      Keyboard_mix (3)_1: -514008373
+      Keyboard_mix (3)_2: 1005107175
+      Keyboard_mix (3)_3: 147030971
+      Keyboard_mix (3)_4: -991310953
+      Keyboard_mix (3)_5: -1349115743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

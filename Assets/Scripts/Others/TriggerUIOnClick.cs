@@ -53,7 +53,7 @@ public class TriggerUIOnClick : MonoBehaviour
     }
 
     private void Update() {
-        // Luôn đảm bảo key tồn tại trước khi truy cập
+        // Check key state before unlock
         if (!itemStateDict.ContainsKey(itemID))
             itemStateDict[itemID] = false;
 
@@ -83,7 +83,7 @@ public class TriggerUIOnClick : MonoBehaviour
         }
     }
 
-    // Hàm reset cho từng instance
+    // Reset instance
     public void ResetInstanceState() {
         itemStateDict[itemID] = false;
         if (cachedCollider != null) {
@@ -93,7 +93,7 @@ public class TriggerUIOnClick : MonoBehaviour
             uiToshow.SetActive(false);
     }
 
-    // Gọi hàm này khi reset game
+    // Reset all instance
     public static void ResetItemStateDict() {
         itemStateDict = new Dictionary<string, bool>();
         foreach (var instance in allInstances) {

@@ -18,16 +18,19 @@ public class KeyPadColorController : MonoBehaviour {
 
     public ColorKeypad correctColor;
 
+    // Change color
     public void ChangeColor() { 
         int nextColor = ((int)currentColor + 1) % colorList.Count;
         currentColor = (ColorKeypad)nextColor;
         image.color = colorList[nextColor];
     }
 
+    // Check color
     public bool isCorrectColor() {
         return currentColor == correctColor;
     }
 
+    // Reset
     public void ResetColor() {
         currentColor = ColorKeypad.white;
         image.color = colorList[0]; 

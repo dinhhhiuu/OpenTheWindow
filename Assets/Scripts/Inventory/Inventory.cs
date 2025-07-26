@@ -11,7 +11,6 @@ public class Inventory {
     public Inventory(Action<Item> useItemAction) {
         this.useItemAction = useItemAction;
         itemList = new List<Item>();
-        // AddItem(new Item {itemType = Item.ItemType.KeyWhite, amount = 1});
     }
 
     // Add Item
@@ -65,7 +64,7 @@ public class Inventory {
         return itemList;
     }
 
-    // Dùng item: báo về player để set selectedItem
+    // Use item: notify player to set selected item
     public void UseItem(Item item) {
         useItemAction(item);
     }

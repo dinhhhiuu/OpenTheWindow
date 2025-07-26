@@ -5,8 +5,10 @@ using UnityEngine;
 public class KeyPadColorManager : MonoBehaviour {
     public KeyPadColorController[] colorControllers;
     [SerializeField] private GameObject key;
+
     public static bool isCorrect = false;
 
+    // Check all color
     public void CheckAllKeypads() {
         foreach (var kp in colorControllers)
         {
@@ -21,6 +23,7 @@ public class KeyPadColorManager : MonoBehaviour {
         isCorrect = true;
     }
 
+    // Reset
     public void ResetAllKeypads() {
         foreach (var kp in colorControllers) {
             kp.ResetColor();
@@ -28,6 +31,7 @@ public class KeyPadColorManager : MonoBehaviour {
         transform.parent.gameObject.SetActive(false);
     }
 
+    // Reset static variable
     public static void Reset() {
         isCorrect = false;
     }

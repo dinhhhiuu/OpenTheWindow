@@ -9,17 +9,13 @@ public class player : MonoBehaviour {
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Animator animator;
-
     private Vector3 targetPosition;
     private bool isMoving = false;
-
     private Inventory inventory;
-    [SerializeField] private UI_Inventory uiInventory;
     private static Item selectedItem;
 
+    [SerializeField] private UI_Inventory uiInventory;
     [SerializeField] private string walkableTag = "WalkableZone";
-
-    // Xử lí va chạm wall
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private float wallCheckDistance = 1f;
 
@@ -165,7 +161,7 @@ public class player : MonoBehaviour {
         return inventory;
     }
 
-    // Vẽ điểm đích để debug
+    // Draw gizmos to show the target position
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(targetPosition, 1f);

@@ -8,7 +8,7 @@ public static class Loader {
     
     public enum Scene {
         MainHome,
-        SampleScene,
+        // SampleScene,
         Loading,
         OverviewHouse,
         Kitchen,

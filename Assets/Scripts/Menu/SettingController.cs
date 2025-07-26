@@ -6,10 +6,10 @@ public class SettingController : MonoBehaviour {
     [SerializeField] private GameObject settingPanel;
     [SerializeField] private GameObject line;
     [SerializeField] private GameObject winPanel;
+    [SerializeField] private Loader.Scene targetScene;
 
     private static bool isTurnSound = true;
     private static bool isWin = false;
-    [SerializeField] private Loader.Scene targetScene;
 
     private void Update() {
         Winning();

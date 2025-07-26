@@ -6068,7 +6068,7 @@ MonoBehaviour:
   settingPanel: {fileID: 1607223988}
   line: {fileID: 563432834}
   winPanel: {fileID: 1319223002}
-  targetScene: 7
+  targetScene: 6
 --- !u!1 &412360857
 GameObject:
   m_ObjectHideFlags: 0
@@ -11187,7 +11187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a698d1c38b89cf42bcd1bb276e5680b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 4
+  targetScene: 3
   doorObject: {fileID: 2006944402}
 --- !u!1 &1112299106
 GameObject:
@@ -11354,7 +11354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6af9253dd07d4a4d928fc05167075e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 5
+  targetScene: 4
 --- !u!61 &1119815382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15682,7 +15682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a698d1c38b89cf42bcd1bb276e5680b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 6
+  targetScene: 5
   doorObject: {fileID: 2107608876}
 --- !u!1 &1900516644
 GameObject:
@@ -23483,7 +23483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6af9253dd07d4a4d928fc05167075e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 3
+  targetScene: 2
 --- !u!212 &2040846522
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23583,7 +23583,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.070534706, y: -0.30257225}
+  m_Offset: {x: 0.070534706, y: 0.050073624}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -23594,7 +23594,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9953613, y: 0.8948555}
+  m_Size: {x: 2.9953613, y: 0.7025032}
   m_EdgeRadius: 0
 --- !u!1 &2055069193
 GameObject:

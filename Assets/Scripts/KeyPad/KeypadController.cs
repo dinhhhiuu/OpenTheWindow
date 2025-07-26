@@ -3,7 +3,7 @@ using TMPro;
 
 public class KeypadController : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI inputText;
-    [SerializeField] private string correctPassword = "1234";
+    [SerializeField] private string correctPassword = "";
     [SerializeField] private GameObject key;
 
     private string currentInput = "";
@@ -17,6 +17,7 @@ public class KeypadController : MonoBehaviour {
         nameKey = key.name;
     }
 
+    // Press number
     public void OnNumberPressed(string number) {
         if (currentInput.Length < lengthInput) {
             currentInput += number;
@@ -24,12 +25,14 @@ public class KeypadController : MonoBehaviour {
         }
     }
 
+    // Clear
     public void OnClear() {
         currentInput = "";
         inputText.text = currentInput;
         transform.parent.gameObject.SetActive(false);
     }
 
+    // Submit
     public void OnSubmit() {
         if (currentInput == correctPassword) {
             Debug.Log("Correct Password");
@@ -47,6 +50,7 @@ public class KeypadController : MonoBehaviour {
         }
     }
 
+    // Reset static variable
     public static void Reset() {
         isCorrect = false;
     }

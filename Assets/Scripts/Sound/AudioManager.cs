@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
-    [SerializeField] private AudioSource backgroundAudioSource;
-
-    [SerializeField] private AudioClip backGroundClip;
-
     public static AudioManager Instance { get; private set; }
+
+    [SerializeField] private AudioSource backgroundAudioSource;
+    [SerializeField] private AudioClip backGroundClip;
 
     private void Awake() {
         if (Instance == null) {

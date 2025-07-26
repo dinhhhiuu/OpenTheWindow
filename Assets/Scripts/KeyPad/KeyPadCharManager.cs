@@ -5,8 +5,10 @@ using UnityEngine;
 public class KeyPadCharManager : MonoBehaviour {
     public KeyPadCharController[] charControllers;
     [SerializeField] private GameObject key;
+
     public static bool isCorrectChar = false;
 
+    // Check all char
     public void CheckAllKeypads() {
         foreach (var kp in charControllers) {
             Debug.Log("Sai ki tự");
@@ -20,6 +22,7 @@ public class KeyPadCharManager : MonoBehaviour {
         isCorrectChar = true;
     }
 
+    // Reset
     public void ResetAllKeypads() {
         foreach (var kp in charControllers) {
             kp.ResetChar();
@@ -27,6 +30,7 @@ public class KeyPadCharManager : MonoBehaviour {
         transform.parent.gameObject.SetActive(false);
     }
 
+    // Reset static variable
     public static void Reset() {
         isCorrectChar = false;
     }

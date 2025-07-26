@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Sister : MonoBehaviour {
-    private Animator animator;
-    [SerializeField] public SpeechBubbleController speechBubble;
     public static Sister Instance { get; private set; }
-
+   
     private bool isFullCoin = false;
+    [SerializeField] private SpeechBubbleController speechBubble;
 
     private void Awake() {
         if (Instance == null) {
@@ -15,10 +14,6 @@ public class Sister : MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
-    }
-
-    private void Start() {
-        animator = GetComponent<Animator>();
     }
 
     private void Update() {
@@ -32,6 +27,7 @@ public class Sister : MonoBehaviour {
         Item selectedItem = player.GetSelectedItem();
 
         if (selectedItem == null) {
+            Debug.Log("Chưa chọn vật phẩm");
             speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho!!!");
         }
 
@@ -43,11 +39,12 @@ public class Sister : MonoBehaviour {
             isFullCoin = true;
             speechBubble.Show("Đúng là anh trai của em!!");
         } else if (selectedItem.itemType.ToString() == "Coin" && selectedItem.amount != 23) {
-            speechBubble.Show("Keo thế kiếm thêm " + (23 - selectedItem.amount) + " đồng xu nữa đi!");
+            Debug.Log("Chưa đủ coin");
+            speechBubble.Show("Keo thế! Kiếm thêm " + (23 - selectedItem.amount) + " đồng xu nữa đi!");
             player.UnSelectItem();
         } else {
             Debug.Log("Sai vật phẩm");
-            speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho!!!");
+            speechBubble.Show("Đồng xu đâuuuu!!!");
             player.UnSelectItem();
         }
     }

@@ -5,8 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class UI_Inventory : MonoBehaviour
-{
+public class UI_Inventory : MonoBehaviour {
     private Inventory inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
@@ -22,7 +21,7 @@ public class UI_Inventory : MonoBehaviour
     }
 
     public void SetInventory(Inventory inventory) {
-        // Nếu đã đăng ký event trước đó thì bỏ
+        // If event has been registered before, then remove
         if (this.inventory != null)
             this.inventory.OnItemListChanged -= Inventory_OnItemListChanged;
 
@@ -48,7 +47,6 @@ public class UI_Inventory : MonoBehaviour
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
-            // Gắn script click trực tiếp trong class gộp
             UI_ItemSlot slotClick = itemSlotRectTransform.gameObject.AddComponent<UI_ItemSlot>();
             slotClick.Setup(item, inventory, player);
 
@@ -68,14 +66,13 @@ public class UI_Inventory : MonoBehaviour
     }
 
     private void OnDestroy() {
-        // Gỡ đăng ký event khi UI bị xóa
+        // Delete event when UI is destroyed
         if (inventory != null)
             inventory.OnItemListChanged -= Inventory_OnItemListChanged;
     }
 
-    // ===================== LỚP LỒNG ======================
-    private class UI_ItemSlot : MonoBehaviour, IPointerClickHandler
-    {
+    // ===================== UI Item Slot ======================
+    private class UI_ItemSlot : MonoBehaviour, IPointerClickHandler {
         private Item item;
         private Inventory inventory;
         private player player;

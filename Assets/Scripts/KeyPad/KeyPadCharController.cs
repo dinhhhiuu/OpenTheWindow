@@ -6,6 +6,7 @@ using TMPro;
 
 public class KeyPadCharController : MonoBehaviour {
     public enum CharWindow {
+        x,
         w,
         i,
         n,
@@ -17,21 +18,24 @@ public class KeyPadCharController : MonoBehaviour {
     [SerializeField] private Sprite[] sprite;
     [SerializeField] private Image image;
 
-    private CharWindow currentChar = CharWindow.w;
+    private CharWindow currentChar = CharWindow.x;
     public CharWindow correctChar;
 
+    // Change char
     public void ChangeChar() {
         int nextChar = ((int)currentChar + 1) % sprite.Length;
         currentChar = (CharWindow)nextChar;
         image.sprite = sprite[nextChar];
     }
 
+    // Check char
     public bool isCorrectChar() {
         return currentChar == correctChar;
     }
 
+    // Reset
     public void ResetChar() {
-        currentChar = CharWindow.w;
+        currentChar = CharWindow.x;
         image.sprite = defaultSprite;
     }
 }

@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioEffectManager : MonoBehaviour {
+    public static AudioEffectManager Instance { get; private set; }
+
     [SerializeField] private AudioSource effectAudioSource;
 
     [SerializeField] private AudioClip coinClip;
     [SerializeField] private AudioClip pickItem;
     [SerializeField] private AudioClip winClip;
-
-    public static AudioEffectManager Instance { get; private set; }
+    [SerializeField] private AudioClip leavesClip;
+    [SerializeField] private AudioClip doorClip;
 
     private void Awake() {
         if (Instance == null) {
@@ -30,5 +32,13 @@ public class AudioEffectManager : MonoBehaviour {
 
     public void PlayWinSound() {
         effectAudioSource.PlayOneShot(winClip);
+    }
+
+    public void PlayLeavesSound() {
+        effectAudioSource.PlayOneShot(leavesClip);
+    }
+
+    public void PlayDoorSound() {
+        effectAudioSource.PlayOneShot(doorClip);
     }
 }
