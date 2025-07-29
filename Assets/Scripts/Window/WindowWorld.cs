@@ -55,9 +55,7 @@ public class WindowWorld : MonoBehaviour {
 
         if (selectedItem == null) {
             Debug.Log("Chưa chọn vật phẩm");
-        }
-
-        if (selectedItem.itemType.ToString() == windowItem.windowType.ToString()) {
+        } else if (selectedItem.itemType.ToString() == windowItem.windowType.ToString()) {
             Debug.Log("Đúng vật phẩm, mở cửa!");
             AudioEffectManager.Instance.PlayDoorSound();
             player.GetInventory().RemoveItem(new Item { itemType = selectedItem.itemType, amount = 1 });

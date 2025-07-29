@@ -85,8 +85,8 @@ public class SettingController : MonoBehaviour {
         if (Friend.Instance != null)
             Destroy(Friend.Instance.gameObject);
 
-        if (AppleTree.Instance != null)
-            Destroy(AppleTree.Instance.gameObject);
+        if (AppleTreeZone.Instance != null)
+            Destroy(AppleTreeZone.Instance.gameObject);
         
         KeypadController.Reset();
         KeyPadColorManager.Reset();

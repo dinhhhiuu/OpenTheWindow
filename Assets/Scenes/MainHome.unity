@@ -3444,6 +3444,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5221817544104769869, guid: d11440af905f3bd4685434e9ab23a6d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221817544104769869, guid: d11440af905f3bd4685434e9ab23a6d0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837760723148556483, guid: d11440af905f3bd4685434e9ab23a6d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7540231019372093744, guid: d11440af905f3bd4685434e9ab23a6d0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -14882,6 +14894,10 @@ PrefabInstance:
     - target: {fileID: 411219084908009796, guid: 2ea68c1d6070b8c4f8714da384bb0ce2, type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 411219084908009796, guid: 2ea68c1d6070b8c4f8714da384bb0ce2, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2214595860799270153, guid: 2ea68c1d6070b8c4f8714da384bb0ce2, type: 3}
       propertyPath: m_LocalPosition.x

@@ -104,6 +104,11 @@ public class player : MonoBehaviour {
                     sister.OnMouseDown();
                     return;
                 }
+                AppleTreeZone appleTreeZone = hit.collider.GetComponent<AppleTreeZone>();
+                if (appleTreeZone != null) {
+                    appleTreeZone.OnMouseDown();
+                    return;
+                }
             }
 
             Collider2D hitZone = Physics2D.OverlapPoint(mouseWorldPos);

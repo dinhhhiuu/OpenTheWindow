@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AppleTree : MonoBehaviour {
-    public static AppleTree Instance { get; private set; }
+public class AppleTreeZone : MonoBehaviour {
+    public static AppleTreeZone Instance { get; private set; }
 
-    private Animator animator;
     private bool isCut = false;
-    
+    private Animator animator;
     [SerializeField] private GameObject apple;
-    // [SerializeField] private GameObject appleTree;
+    [SerializeField] private GameObject appleTree;
 
     private void Awake() {
         if (Instance == null) {
@@ -18,10 +17,9 @@ public class AppleTree : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    
+
     private void Start() {
-        animator = GetComponent<Animator>();
-        GetComponent<Collider2D>().enabled = true;
+        animator = appleTree.GetComponent<Animator>();
     }
 
     private void Update() {
@@ -39,9 +37,8 @@ public class AppleTree : MonoBehaviour {
             player.UnSelectItem();
         } else if (selectedItem.itemType.ToString() == "Sword") {
             Debug.Log("Đúng vật phẩm");
-            AudioEffectManager.Instance.PlayLeavesSound();
-            animator.SetTrigger("isCut");
             isCut = true;
+            animator.SetTrigger("isCut");
             apple.SetActive(true);
             player.UnSelectItem();
         } else {
