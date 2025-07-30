@@ -11,6 +11,8 @@ public class UI_Inventory : MonoBehaviour {
     private Transform itemSlotTemplate;
     private player player;
 
+    private UI_ItemSlot activeSlot = null;
+
     private void Awake() {
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
@@ -21,7 +23,6 @@ public class UI_Inventory : MonoBehaviour {
     }
 
     public void SetInventory(Inventory inventory) {
-        // If event has been registered before, then remove
         if (this.inventory != null)
             this.inventory.OnItemListChanged -= Inventory_OnItemListChanged;
 
@@ -35,7 +36,8 @@ public class UI_Inventory : MonoBehaviour {
     }
 
     private void RefreshInventoryItems() {
-        foreach (Transform child in itemSlotContainer) { 
+        // Clear old slots except the template
+        foreach (Transform child in itemSlotContainer) {
             if (child == itemSlotTemplate) continue;
             Destroy(child.gameObject);
         }
@@ -43,17 +45,22 @@ public class UI_Inventory : MonoBehaviour {
         int x = 0;
         int y = 0;
         float itemSlotCellSize = 60f;
+
         foreach (Item item in inventory.GetItemList()) {
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
+            // Add UI_ItemSlot script for click handling
             UI_ItemSlot slotClick = itemSlotRectTransform.gameObject.AddComponent<UI_ItemSlot>();
-            slotClick.Setup(item, inventory, player);
+            slotClick.Setup(item, inventory, player, this);
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * (itemSlotCellSize - 10f));
+
+            // Set sprite
             Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
             image.sprite = item.GetSprite();
 
+            // Set amount text
             TextMeshProUGUI uiText = itemSlotRectTransform.Find("amountText").GetComponent<TextMeshProUGUI>();
             uiText.SetText(item.amount > 1 ? item.amount.ToString() : "");
 
@@ -65,22 +72,50 @@ public class UI_Inventory : MonoBehaviour {
         }
     }
 
+    public void SetActiveSlot(UI_ItemSlot slot) {
+        // If click on the same active slot, toggle background off
+        if (activeSlot == slot) {
+            activeSlot.HideBackground();
+            activeSlot = null;
+            player.Instance.UnSelectItem();
+            return;
+        }
+
+        // Hide background of previous slot
+        if (activeSlot != null) {
+            activeSlot.HideBackground();
+        }
+
+        // Set new active slot
+        activeSlot = slot;
+
+        // Show background of new slot
+        if (activeSlot != null) {
+            activeSlot.ShowBackground();
+        }
+    }
+
     private void OnDestroy() {
-        // Delete event when UI is destroyed
         if (inventory != null)
             inventory.OnItemListChanged -= Inventory_OnItemListChanged;
     }
 
     // ===================== UI Item Slot ======================
-    private class UI_ItemSlot : MonoBehaviour, IPointerClickHandler {
+    public class UI_ItemSlot : MonoBehaviour, IPointerClickHandler {
         private Item item;
         private Inventory inventory;
         private player player;
+        private GameObject backgroundGO;
+        private UI_Inventory uiInventory;
 
-        public void Setup(Item item, Inventory inventory, player player) {
+        public void Setup(Item item, Inventory inventory, player player, UI_Inventory uiInventory) {
             this.item = item;
             this.inventory = inventory;
             this.player = player;
+            this.uiInventory = uiInventory;
+
+            backgroundGO = transform.Find("background").gameObject;
+            backgroundGO.SetActive(false);
         }
 
         public void OnPointerClick(PointerEventData eventData) {
@@ -88,9 +123,23 @@ public class UI_Inventory : MonoBehaviour {
             if (inventory == null && player != null) inventory = player.GetInventory();
 
             if (eventData.button == PointerEventData.InputButton.Left) {
-                // Use Item
-                player.UseItem(item);
+                // Use item
+                if (player != null) {
+                    player.UseItem(item);
+                }
+                // Toggle active slot
+                if (uiInventory != null) {
+                    uiInventory.SetActiveSlot(this);
+                }
             }
+        }
+
+        public void ShowBackground() {
+            if (backgroundGO != null) backgroundGO.SetActive(true);
+        }
+
+        public void HideBackground() {
+            if (backgroundGO != null) backgroundGO.SetActive(false);
         }
     }
 }

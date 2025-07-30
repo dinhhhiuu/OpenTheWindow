@@ -28,17 +28,16 @@ public class Friend : MonoBehaviour {
 
         if (selectedItem == null) {
             Debug.Log("Chưa chọn vật phẩm");
-            speechBubble.Show("Đói quá bạn ei!");
+            speechBubble.Show("Đói quá bạn ei");
         } else if (selectedItem.itemType.ToString() == "Apple") {
-            speechBubble.Show("Hehe! Ngon đó!!");
+            speechBubble.Show("Hehe, Ngon đó");
             player.GetInventory().RemoveItem(new Item { itemType = selectedItem.itemType, amount = 1 });
             player.GetInventory().AddItem(new Item { itemType = Item.ItemType.KeyBlack, amount = 1 });
             player.UnSelectItem();
             isFullApple = true;
         }
         else {
-            speechBubble.Show("Này ăn được hả!");
-            player.UnSelectItem();
+            speechBubble.Show("Này ăn được hả");
         }
     }
 }

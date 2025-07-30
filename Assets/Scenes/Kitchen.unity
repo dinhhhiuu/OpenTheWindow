@@ -4688,7 +4688,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1
+      m_AllTileFlags: 1073741825
   - first: {x: -3, y: 5, z: 0}
     second:
       serializedVersion: 2
@@ -5793,6 +5793,14 @@ CompositeCollider2D:
         Y: 51250000
       - X: 74375000
         Y: 51250000
+    - - X: 48750000
+        Y: 22500000
+      - X: 41250000
+        Y: 22500000
+      - X: 41250000
+        Y: 20000000
+      - X: 48750000
+        Y: 20000000
     - - X: 66250000
         Y: 6250000
       - X: 66250000
@@ -6036,6 +6044,10 @@ CompositeCollider2D:
       - {x: 7, y: 6.2499933}
       - {x: 7.000012, y: 5.249992}
       - {x: 7.187508, y: 5.125}
+    - - {x: 4.874971, y: 2}
+      - {x: 4.874971, y: 2.25}
+      - {x: 4.125, y: 2.249971}
+      - {x: 4.125029, y: 2}
     - - {x: 6.4374895, y: 0.4375}
       - {x: 6.625, y: 0.6250108}
       - {x: 6.624971, y: 2}

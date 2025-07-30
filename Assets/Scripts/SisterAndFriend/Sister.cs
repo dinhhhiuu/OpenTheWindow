@@ -28,24 +28,20 @@ public class Sister : MonoBehaviour {
 
         if (selectedItem == null) {
             Debug.Log("Chưa chọn vật phẩm");
-            speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho!!!");
-        }
-
-        if (selectedItem.itemType.ToString() == "Coin" && selectedItem.amount == 23) {
+            speechBubble.Show("Đưa em 23 đồng xu thì trả chìa khóa cho");
+        } else if (selectedItem.itemType.ToString() == "Coin" && selectedItem.amount == 23) {
             Debug.Log("Đủ coin");
             player.GetInventory().RemoveItem(new Item { itemType = selectedItem.itemType, amount = 23 });
             player.UnSelectItem();
             player.GetInventory().AddItem(new Item { itemType = Item.ItemType.KeyBlue, amount = 1 });
             isFullCoin = true;
-            speechBubble.Show("Đúng là anh trai của em!!");
+            speechBubble.Show("Đủ rồi, trả lại chìa khóa đó");
         } else if (selectedItem.itemType.ToString() == "Coin" && selectedItem.amount != 23) {
             Debug.Log("Chưa đủ coin");
-            speechBubble.Show("Keo thế! Kiếm thêm " + (23 - selectedItem.amount) + " đồng xu nữa đi!");
-            player.UnSelectItem();
+            speechBubble.Show("Kiếm thêm " + (23 - selectedItem.amount) + " đồng xu nữa đi!");
         } else {
             Debug.Log("Sai vật phẩm");
             speechBubble.Show("Đồng xu đâuuuu!!!");
-            player.UnSelectItem();
         }
     }
 }
