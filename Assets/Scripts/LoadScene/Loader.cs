@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 using System;
 
 public static class Loader {
-    
     public enum Scene {
         MainHome,
-        // SampleScene,
         Loading,
         OverviewHouse,
         Kitchen,
@@ -16,6 +14,7 @@ public static class Loader {
         Storage,
         Start,
     }
+    
     private static Action onLoaderCallback;
 
     public static void Load(Scene scene) {

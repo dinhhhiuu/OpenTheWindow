@@ -13,6 +13,7 @@ public class CameraFollow : MonoBehaviour {
         }
     }
 
+    // LateUpdate is called after all Update functions
     private void LateUpdate() {
         if (target == null) return;
         Vector3 desiredPosition = target.position + offset;
