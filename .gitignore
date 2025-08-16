@@ -102,6 +102,7 @@ InitTestScene*.unity*
 [Aa]ssets/**/TMP_Bitmap*.shader
 [Aa]ssets/**/TMP_SDF*.shader
 [Aa]ssets/**/TMP_Sprite*.shader
+[Aa]ssets/**/TextMesh Pro/**/*.cginc
 
 # Editor configs
 .vscode/
